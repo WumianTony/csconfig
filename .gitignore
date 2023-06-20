@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# VSCode
+.vscode
+
+# Build
+build/
+
+# Release
+!release/csconfig.exe
