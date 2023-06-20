@@ -39,3 +39,6 @@ build/
 
 # Release
 !release/csconfig.exe
+
+# Todo
+todo.md
