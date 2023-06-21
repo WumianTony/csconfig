@@ -2,6 +2,12 @@
 #include <cstring>
 #include <string>
 
+#include "ctrl.h"
+
+void COMING_SOON() {
+    std::cout << "Coming Soon . . .\n";
+}
+
 bool getPath(std::string &path) {
     FILE *pipe = popen("cd", "r");
     if (!pipe) return true;
@@ -34,26 +40,37 @@ void paramList() {
 int main(int argc, char* argv[]) {
     // std::cout << argc << std::endl;
     // for (int i = 0; i < argc; i ++) std::cout << argv[i] << std::endl;
+    std::string exe_path, arg_path = std::string(argv[0]).substr(0, std::strlen(argv[0]) - 13);
+    if (getPath(exe_path)) {
+        std::cerr << "Exception caught when fetching csconfig executable path\n";
+        return 1;
+    }
+    exe_path = exe_path.substr(0, exe_path.size() - 1);
+    // std::cout << "#" << exe_path << "#" << arg_path << "#\n";
+    if (exe_path == arg_path) { // 检测为双击打开
+        system("cmd /k \"csconfig\""); // 为用户唤起阻塞的 CMD 窗口，并执行 csconfig 获取参数列表
+    }
+
     switch (argc) {
         case 2: // single param
-            std::cout << "Coming Soon . . .\n";
+            if (std::string(argv[1]) == "-default") COMING_SOON();
+            else if (std::string(argv[1]) == "-auto") Control::Auto();
+            else if (std::string(argv[1]) == "-local") COMING_SOON();
+            else if (std::string(argv[1]) == "-version") COMING_SOON();
+            else if (std::string(argv[1]) == "-cfgversion") COMING_SOON();
+            else paramList();
             break;
+
         case 3: // double params
-            std::cout << "Coming Soon . . .\n";
+            COMING_SOON();
             break;
+            
+        case 4: // triple params
+            COMING_SOON();
+            break;
+
         default: // display command list
-            std::string exe_path, arg_path = std::string(argv[0]).substr(0, std::strlen(argv[0]) - 13);
-            if (getPath(exe_path)) {
-                std::cerr << "Exception caught when fetching csconfig executable path\n";
-                return 1;
-            }
-            exe_path = exe_path.substr(0, exe_path.size() - 1);
-            // std::cout << "#" << exe_path << "#" << arg_path << "#\n";
-            if (exe_path == arg_path) { // 检测为双击打开
-                system("cmd /k \"csconfig\""); // 为用户唤起阻塞的 CMD 窗口，并执行 csconfig 获取参数列表
-            } else {
-                paramList();
-            }
+            paramList();
             break;
     }
     // system("pause");
