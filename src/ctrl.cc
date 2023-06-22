@@ -26,6 +26,7 @@ int Auto() {
     // if not, add to the next line from the end of autoexec.cfg
 
     // inform user that everything is done
+    return 0;
 }
 
 }

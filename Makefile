@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = --std=c++17
-INC = -I ./include -I ./src
-SRC = $(wildcard src/*.cc)
+INC = -I ./include -I ./src -I ./src/bash -I ./src/exceptions
+SRC = $(wildcard src/*.cc src/*/*.cc)
 OBJ = $(patsubst %.cc, %.o, $(SRC))
 EXEC = $(basename $(notdir $(wildcard exec/*.cc)))
 
