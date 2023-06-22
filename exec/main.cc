@@ -64,7 +64,6 @@ int main(int argc, char* argv[]) {
                 paramList();
                 break;
         }
-        // system("pause");
 
     } catch (Exceptions::Error error) {
         Exceptions::perr(error);
@@ -81,5 +80,6 @@ int main(int argc, char* argv[]) {
         Exceptions::perr(error);
         return 1;
     }
+    // system("pause");
     return 0;
 }

@@ -1,6 +1,5 @@
-make main >/nul
-copy main.exe csconfig.exe >/nul
-move csconfig.exe build >/nul
-copy main.exe csconfig.exe >/nul
-move csconfig.exe release >/nul
-del main.exe >/nul
+cd ./build >nul 2>&1
+cmake -G "Unix Makefiles" .. >nul 2>&1
+make >nul 2>&1
+copy /V /Y csconfig.exe ../release/csconfig.exe >nul 2>&1
+@REM cd ..
