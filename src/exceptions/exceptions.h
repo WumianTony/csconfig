@@ -25,10 +25,20 @@ namespace Exceptions {
     namespace System {
         const Error
         kStdException               = {1,   Level::kError,   ""},
-        kUnknownError               = {2,   Level::kError,   "Unknown exception"},
-        kBashError                  = {11,  Level::kError,   "Cannot access bash"},
-        kCommandError               = {12,  Level::kError,   "Cannot execute such command"},
-        kCommandParamOutOfBounds    = {13,  Level::kWarning, "Command parameter out of bounds"};
+        kUnknownError               = {2,   Level::kError,   "Unknown exception"};
+    }
+
+    namespace Steam {
+        const Error
+        kPathNotFound               = {101, Level::kWarning, "Steam path not found"};
+    }
+
+    namespace Bash {
+        const Error
+        kBashError                  = {201, Level::kError,   "Cannot access bash"},
+        kCommandError               = {211, Level::kError,   "Cannot execute such command"},
+        kCommandParamOutOfBounds    = {212, Level::kWarning, "Command parameter out of bounds"},
+        kUIEmptyChoice              = {251, Level::kError, "Empty choice"};
     }
 
     std::string fetchScope(Error error);

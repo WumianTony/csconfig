@@ -2,8 +2,9 @@
 
 namespace Exceptions {
 
-std::string fetchScope(Error error) {
+std::string fetchScope(Error error) { // 目前不太能正常工作
     std::string scope_name = typeid(decltype(error)).name();
+    // std::cout << scope_name;
     size_t pos = scope_name.find("::");
     if (pos != std::string::npos) {
         return scope_name.substr(0, pos);
