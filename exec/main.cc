@@ -1,10 +1,4 @@
-#include <iostream>
-#include <cstring>
-#include <string>
-
-#include "cmd.h"
-#include "ctrl.h"
-#include "exceptions.h"
+#include "global.h"
 
 void COMING_SOON() {
     std::cout << "Coming Soon . . .\n";
@@ -32,10 +26,11 @@ void paramList() {
 
 int main(int argc, char* argv[]) {
     try {
+        SetConsoleOutputCP(CP_UTF8);
         // std::cout << argc << std::endl;
         // for (int i = 0; i < argc; i ++) std::cout << argv[i] << std::endl;
         std::string 
-            exe_path = Bash::getExecPath(), 
+            exe_path = Bash::fetchExecPath(), 
             arg_path = std::string(argv[0]).substr(0, std::strlen(argv[0]) - 13);
         exe_path = exe_path.substr(0, exe_path.size() - 1);
         // std::cout << "#" << exe_path << "#" << arg_path << "#\n";

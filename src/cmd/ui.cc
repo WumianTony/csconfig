@@ -22,7 +22,7 @@ int MultiChoice(std::string display, const std::vector<std::string>& options) {
     }
 
     while (true) {
-        locate(3, 0);
+        locate(2, 0);
         int key = _getch();
         if (key == 13) return index;
         if (key == 72 || key == 80) {

@@ -1,9 +1,7 @@
 #ifndef _EXCEPTIONS_H_
 #define _EXCEPTIONS_H_
 
-#include <iostream>
-#include <string>
-#include <typeinfo>
+#include "global.h"
 
 namespace Exceptions {
 
@@ -30,7 +28,10 @@ namespace Exceptions {
 
     namespace Steam {
         const Error
-        kPathNotFound               = {101, Level::kWarning, "Steam path not found"};
+        kPathNotFound               = {101, Level::kWarning, "Steam path not found"},
+        kUserNotFound               = {111, Level::kWarning, "Steam user not found"},
+        kUserNicknameNotFound       = {112, Level::kWarning, "Steam user nickname not found"},
+        kBadFile                    = {121, Level::kError  , "Cannot open this \".vdf\" file"};
     }
 
     namespace Bash {
@@ -38,7 +39,7 @@ namespace Exceptions {
         kBashError                  = {201, Level::kError,   "Cannot access bash"},
         kCommandError               = {211, Level::kError,   "Cannot execute such command"},
         kCommandParamOutOfBounds    = {212, Level::kWarning, "Command parameter out of bounds"},
-        kUIEmptyChoice              = {251, Level::kError, "Empty choice"};
+        kUIEmptyChoice              = {299, Level::kError, "Empty choice"};
     }
 
     std::string fetchScope(Error error);

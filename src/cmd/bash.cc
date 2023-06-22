@@ -11,7 +11,23 @@ static std::string Popen(std::string cmd) {
     return buffer;
 }
 
-std::string getExecPath() {
+static std::vector<std::string> Parse(std::stringstream& raw_result, 
+    bool (*validation)(std::string) 
+    = [](std::string line) {
+        return true;
+    }
+) {
+    std::vector<std::string> result;
+    std::string temp;
+    while (std::getline(raw_result, temp)) {
+        if (validation(temp)) {
+            result.push_back(temp);
+        }
+    }
+    return result;
+}
+
+std::string fetchExecPath() {
     return Popen("cd");
 }
 
@@ -22,14 +38,14 @@ bool isPathExist(std::string path) {
 
 std::vector<std::string> fetchAllSteamPaths() {
     std::stringstream raw_result(Popen("cd / & dir /s /b Steam"));
-    std::vector<std::string> result;
-    std::string temp;
-    while (std::getline(raw_result, temp)) {
-        if (temp.find("Steam", temp.find_last_of('\\')) != std::string::npos && isPathExist(temp + "/userdata")) {
-            result.push_back(temp);
-        }
-    }
-    return result;
+    return Parse(raw_result, [](std::string line) {
+        return line.find("Steam", line.find_last_of('\\')) != std::string::npos && isPathExist(line + "/userdata");
+    });
+}
+
+std::vector<std::string> fetchAllUsers(std::string steam_path) {
+    std::stringstream raw_result(Popen("cd " + steam_path + "/userdata & dir /b"));
+    return Parse(raw_result);
 }
 
 }
