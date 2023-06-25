@@ -43,9 +43,9 @@ std::vector<Arg> Default() {
         {"cl_crosshairstyle", "4"},
         {"cl_crosshair_outlinethickness", "0"},
         {"cl_crosshair_drawoutline", "0"},
-        {"cl_crosshaircolor", "0"},
+        {"cl_crosshaircolor", "4"},
         {"cl_crosshairsize", "0"},
-        {"cl_crosshairthickness", "0"},
+        {"cl_crosshairthickness", "1"},
         // gun model
         {"viewmodel_recoil", "0"},
         {"cl_bob_lower_amt", "5"},
@@ -56,5 +56,17 @@ std::vector<Arg> Default() {
     };
 }
 }
+}
+
+namespace Fetch {
+
+Arg arg(std::string name) {
+    if (user_args_index.count(name) == 1) 
+        return user_args[user_args_index[name]];
+    if (default_args_index.count(name) == 1) 
+        return default_args[default_args_index[name]];
+    throw Exceptions::Config::kArgNotFound;
+}
+
 }
 }

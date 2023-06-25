@@ -30,17 +30,20 @@ const std::string crosshair_args_name[] = {
 Alias std_crosshair() {
     std::vector<Arg> crosshair_args;
     for (auto each : crosshair_args_name) {
-        crosshair_args.push_back(user_args[user_args_index[each]]);
+        crosshair_args.push_back(Fetch::arg(each));
     }
-    return {"std_crosshair", {{}, {crosshair_args}, {}}};
+    return {"std_crosshair", {{}, crosshair_args, {}}};
 }
 
 Alias util_crosshair() {
     std::vector<Arg> crosshair_args;
-    for (auto each : crosshair_args_name) {
-        crosshair_args.push_back(default_args[default_args_index[each]]);
+    for (int i = 0; i < 8; i ++) {
+        crosshair_args.push_back(default_args[default_args_index[crosshair_args_name[i]]]);
     }
-    return {"util_crosshair", {{}, {crosshair_args}, {}}};
+    crosshair_args.push_back({crosshair_args_name[8], "1"});
+    crosshair_args.push_back({crosshair_args_name[9], "3000"});
+    crosshair_args.push_back({crosshair_args_name[10], "0.1"});
+    return {"util_crosshair", {{}, crosshair_args, {}}};
 }
 
 Alias util_left() {
@@ -57,7 +60,7 @@ Alias _util_left() {
         "-attack",
         "std_crosshair"
     }, {
-        user_args[user_args_index["cl_hud_color"]]
+        Fetch::arg("cl_hud_color")
     }, {}}};
 }
 
@@ -76,7 +79,7 @@ Alias _util_right() {
         "-attack2",
         "std_crosshair"
     }, {
-        user_args[user_args_index["cl_hud_color"]]
+        Fetch::arg("cl_hud_color")
     }, {}}};
 }
 
@@ -93,7 +96,7 @@ Alias _gyro() {
     return {"-gyro", {{
         "-util_left"
     }, {
-        user_args[user_args_index["sensitivity"]],
+        Fetch::arg("sensitivity"),
         {"m_yaw", "0.022"}
     }, {}}};
 }

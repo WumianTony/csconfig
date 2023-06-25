@@ -11,17 +11,17 @@ Index index(std::vector<Bind> binds) {
     return binds_index;
 }
 
-Index antimap(std::vector<Bind> binds) {
-    Index binds_antimap = {};
+Antimap antimap(std::vector<Bind> binds) {
+    Antimap binds_antimap = {};
     for (auto bind : binds) {
         for (auto command : bind.command_serial.commands) {
-            binds_antimap[command] = bind.key;
+            binds_antimap[command].push_back(bind.key);
         }
         for (auto arg : bind.command_serial.args) {
-            binds_antimap[arg.name] = bind.key;
+            binds_antimap[arg.name].push_back(bind.key);
         }
         for (auto toggle : bind.command_serial.toggles) {
-            binds_antimap[toggle.arg_name] = bind.key;
+            binds_antimap[toggle.arg_name].push_back(bind.key);
         }
     }
     return binds_antimap;
@@ -29,6 +29,39 @@ Index antimap(std::vector<Bind> binds) {
 
 namespace Binds {
 
+std::vector<Bind> Default() {
+    
 }
+
+}
+}
+
+namespace Fetch {
+
+Bind bind(std::string key) {
+    if (user_binds_index.count(key) == 1) 
+        return user_binds[user_binds_index[key]];
+    if (default_binds_index.count(key) == 1) 
+        return default_binds[default_binds_index[key]];
+    throw Exceptions::Config::kBindNotFound;
+}
+
+std::vector<Bind> antibind(std::string target) {
+    std::vector<Bind> result;
+    if (user_binds_antimap.count(target) == 1) {
+        for (auto each : user_binds_antimap[target]) {
+            result.push_back(user_binds[user_binds_index[each]]);
+        }
+        return result;
+    }
+    if (default_binds_antimap.count(target) == 1) {
+        for (auto each : default_binds_antimap[target]) {
+            result.push_back(default_binds[default_binds_index[each]]);
+        }
+        return result;
+    }
+    throw Exceptions::Config::kBindNotFound;
+}
+
 }
 }

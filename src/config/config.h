@@ -5,6 +5,7 @@
 
 namespace Config {
     typedef std::unordered_map<std::string, int> Index;
+    typedef std::unordered_map<std::string, std::vector<std::string>> Antimap;
     struct Arg {
         std::string name;
         std::string value;
@@ -35,13 +36,16 @@ namespace Config {
 
     static std::vector<Bind> user_binds;
     static Index user_binds_index;
+    static Antimap user_binds_antimap;
     static std::vector<Bind> default_binds;
     static Index default_binds_index;
+    static Antimap default_binds_antimap;
 
     static std::vector<Alias> aliases;
     static Index aliases_index;
 
     void Init();
+    void UserMap();
     void Parse(std::string raw_config);
     std::string Serialize(Commands command_serial);
 
@@ -49,7 +53,7 @@ namespace Config {
         Index index(std::vector<Arg> args);
         Index index(std::vector<Bind> binds);
         Index index(std::vector<Alias> aliases);
-        Index antimap(std::vector<Bind> binds);
+        Antimap antimap(std::vector<Bind> binds);
 
         namespace Args {
             std::vector<Arg> Default();
@@ -68,7 +72,8 @@ namespace Config {
     namespace Fetch {
         Arg arg(std::string name);
         Bind bind(std::string key);
-        Bind antibind(std::string target); // either command or arg_name
+        std::vector<Bind> antibind(std::string target);
+        // either command or arg_name, possible with multiple results
     }
 }
 

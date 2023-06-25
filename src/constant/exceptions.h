@@ -39,7 +39,13 @@ namespace Exceptions {
         kBashError                  = {201, Level::kError,   "Cannot access bash"},
         kCommandError               = {211, Level::kError,   "Cannot execute such command"},
         kCommandParamOutOfBounds    = {212, Level::kWarning, "Command parameter out of bounds"},
-        kUIEmptyChoice              = {299, Level::kError, "Empty choice"};
+        kUIEmptyChoice              = {299, Level::kError,   "Empty choice"};
+    }
+
+    namespace Config {
+        const Error
+        kArgNotFound                = {301, Level::kError,   "Argument not found"},
+        kBindNotFound               = {302, Level::kError,   "Bind not found"};
     }
 
     std::string fetchScope(Error error);
