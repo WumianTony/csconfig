@@ -1,17 +1,42 @@
 #include "config.h"
 
 namespace Config {
-namespace Generate {
 
-Index index(std::vector<Alias> aliases) {
-    Index aliases_index = {};
+const Alias 
+
+util_left = {"+util_left", {
+    {"+attack"}, {
+    {"cl_hud_color", "10"},
+    {"cl_crosshaircolor", "0"}
+}, {}}},
+
+util_right = {"+util_right", {
+    {"+attack2",
+    "r_cleardecals"}, {
+    {"cl_hud_color", "7"},
+    {"cl_crosshaircolor", "2"}
+}, {}}},
+
+gyro = {"+gyro", {
+    {"+util_left"}, {
+    {"sensitivity", "0.90001"},
+    {"m_yaw", "2000"}
+}, {}}};
+
+std::vector<Alias> Alias::user_ = {
+    Alias::util_crosshair(),
+    util_left,
+    util_right,
+    gyro,
+};
+
+Index Alias::index(std::vector<Alias> aliases) {
+    Index index = {};
     for (int i = 0; i < aliases.size(); i ++) {
-        aliases_index[aliases[i].name] = i;
+        index[aliases[i].name] = i;
     }
-    return aliases_index;
+    return index;
 }
-
-namespace Aliases {
 
 const std::string crosshair_args_name[] = {
     "cl_crosshairalpha",
@@ -27,91 +52,84 @@ const std::string crosshair_args_name[] = {
     "cl_crosshairdot"
 };
 
-Alias std_crosshair() {
+Alias Alias::std_crosshair() {
     std::vector<Arg> crosshair_args;
     for (auto each : crosshair_args_name) {
-        crosshair_args.push_back(Fetch::arg(each));
+        crosshair_args.push_back(Arg::fetch(each));
     }
     return {"std_crosshair", {{}, crosshair_args, {}}};
 }
 
-Alias util_crosshair() {
+Alias Alias::util_crosshair() {
     std::vector<Arg> crosshair_args;
+    debug_info << "util_crosshair 1"; ddump();
     for (int i = 0; i < 8; i ++) {
-        crosshair_args.push_back(default_args[default_args_index[crosshair_args_name[i]]]);
+        debug_info << "util_crosshair 2 1"; ddump();
+        std::string arg_name = crosshair_args_name[i];
+        debug_info << "util_crosshair 2 2"; ddump();
+        int index = Arg::default_i[arg_name];
+        debug_info << "util_crosshair 2 3 " << Arg::default_.size(); ddump();
+        auto arg = Arg::default_[index];
+        debug_info << "util_crosshair 2 4"; ddump();
+        crosshair_args.push_back(Arg::default_[Arg::default_i[crosshair_args_name[i]]]);
+        debug_info << "util_crosshair 2 5"; ddump();
     }
+    debug_info << "util_crosshair 3"; ddump();
     crosshair_args.push_back({crosshair_args_name[8], "1"});
+    debug_info << "util_crosshair 4"; ddump();
     crosshair_args.push_back({crosshair_args_name[9], "3000"});
+    debug_info << "util_crosshair 5"; ddump();
     crosshair_args.push_back({crosshair_args_name[10], "0.1"});
+    debug_info << "util_crosshair 6"; ddump();
     return {"util_crosshair", {{}, crosshair_args, {}}};
 }
 
-Alias util_left() {
-    return {"+util_left", {{
-        "+attack"
-    }, {
-        {"cl_hud_color", "10"},
-        {"cl_crosshaircolor", "0"}
+Alias Alias::_util_left() {
+    return {"-util_left", {
+        {"-attack",
+        "std_crosshair"}, {
+        Arg::fetch("cl_hud_color")
     }, {}}};
 }
 
-Alias _util_left() {
-    return {"-util_left", {{
-        "-attack",
-        "std_crosshair"
-    }, {
-        Fetch::arg("cl_hud_color")
+Alias Alias::_util_right() {
+    return {"-util_right", {
+        {"-attack2",
+        "std_crosshair"}, {
+        Arg::fetch("cl_hud_color")
     }, {}}};
 }
 
-Alias util_right() {
-    return {"+util_right", {{
-        "+attack2",
-        "r_cleardecals"
-    }, {
-        {"cl_hud_color", "7"},
-        {"cl_crosshaircolor", "2"}
-    }, {}}};
-}
-
-Alias _util_right() {
-    return {"-util_right", {{
-        "-attack2",
-        "std_crosshair"
-    }, {
-        Fetch::arg("cl_hud_color")
-    }, {}}};
-}
-
-Alias gyro() {
-    return {"+gyro", {{
-        "+util_left"
-    }, {
-        {"sensitivity", "0.90001"},
-        {"m_yaw", "2000"}
-    }, {}}};
-}
-
-Alias _gyro() {
+Alias Alias::_gyro() {
     return {"-gyro", {{
         "-util_left"
     }, {
-        Fetch::arg("sensitivity"),
+        Arg::fetch("sensitivity"),
         {"m_yaw", "0.022"}
     }, {}}};
 }
 
-std::vector<Alias> Default() {
-    return {
+// std::vector<Alias> Alias::Default() {
+//     std::vector<Alias> result;
+//     debug_info << "Config::Generate::Aliases::Default 1"; ddump();
+//     result.push_back(util_crosshair());
+//     debug_info << "Config::Generate::Aliases::Default 2"; ddump();
+//     result.push_back(util_left);
+//     debug_info << "Config::Generate::Aliases::Default 3"; ddump();
+//     result.push_back(util_right);
+//     debug_info << "Config::Generate::Aliases::Default 4"; ddump();
+//     result.push_back(gyro);
+//     debug_info << "Config::Generate::Aliases::Default 5"; ddump();
+//     return result;
+// }
+
+void Alias::Load() {
+    Alias::user_.insert(Alias::user_.end(), {
         std_crosshair(),
-        util_crosshair(),
-        util_left(),
         _util_left(),
-        util_right(),
         _util_right(),
-        gyro(),
         _gyro()
-    };
+    });
 }
 
 const std::string unavaliable_custom_commands[] = {
@@ -148,7 +166,7 @@ const std::pair<std::string, std::string> custom_commands[] = {
     {"scam", "/call/scam"}
 };
 
-void CustomCommands(std::vector<Alias>& aliases) {
+void Alias::CustomCommands(std::vector<Alias>& aliases) {
     for (auto each : custom_commands) {
         aliases.push_back({each.first, {
             {"exec wumiancfg-csgo/" + each.second}, {}, {}
@@ -159,6 +177,4 @@ void CustomCommands(std::vector<Alias>& aliases) {
     }
 }
 
-}
-}
 }

@@ -39,12 +39,12 @@ bool isPathExist(std::string path) {
 std::vector<std::string> fetchAllSteamPaths() {
     std::stringstream raw_result(Popen("cd / & dir /s /b Steam"));
     return Parse(raw_result, [](std::string line) {
-        return line.find("Steam", line.find_last_of('\\')) != std::string::npos && isPathExist(line + "/userdata");
+        return line.find("Steam", line.find_last_of('\\')) != std::string::npos && isPathExist(line + "\\userdata");
     });
 }
 
 std::vector<std::string> fetchAllUsers(std::string steam_path) {
-    std::stringstream raw_result(Popen("cd " + steam_path + "/userdata & dir /b"));
+    std::stringstream raw_result(Popen("cd " + steam_path + "\\userdata & dir /b"));
     return Parse(raw_result);
 }
 

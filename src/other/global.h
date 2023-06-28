@@ -15,6 +15,13 @@
 #include <typeinfo>
 #include <vector>
 #include <unordered_map>
+
+extern bool debug_mode;
+extern std::stringstream debug_info;
+void dclear();
+void ddump();
+bool isDebug();
+
 // cmd
 #include "bash.h"
 #include "ui.h"

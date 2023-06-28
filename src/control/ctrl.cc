@@ -32,16 +32,20 @@ void Auto() {
     // fetch steam path (CMD cd / & dir /s /b Steam)
     std::string steam_path = "";
     std::cout << "Fetching steam path ...\n(it might take quite long since it scans your whole disc from C:/)\n";
-    std::vector<std::string> steam_paths = Bash::fetchAllSteamPaths();
-    switch (steam_paths.size()) {
-        case 0:
-            throw Exceptions::Steam::kPathNotFound;
-        case 1:
-            steam_path = steam_paths[0];
-            std::cout << "Steam path: " << steam_path << std::endl;
-            break;
-        default:
-            steam_path = steam_paths[UI::MultiChoice("Multiple steam paths were detected.\nYou have to choose one of them.", steam_paths)];
+    if (isDebug()) {
+        steam_path = "C:\\Program Files (x86)\\Steam";
+    } else {
+        std::vector<std::string> steam_paths = Bash::fetchAllSteamPaths();
+        switch (steam_paths.size()) {
+            case 0:
+                throw Exceptions::Steam::kPathNotFound;
+            case 1:
+                steam_path = steam_paths[0];
+                std::cout << "Steam path: " << steam_path << std::endl;
+                break;
+            default:
+                steam_path = steam_paths[UI::MultiChoice("Multiple steam paths were detected.\nYou have to choose one of them.", steam_paths)];
+        }
     }
 
     // fetch user code (CMD cd steampath/userdata & dir /b)
@@ -68,8 +72,13 @@ void Auto() {
 
     // debug info
     system("cls");
-    std::cout << steam_path << std::endl << user_code << std::endl;
-
+    debug_info << steam_path << std::endl << user_code; ddump();
+    debug_info << "breakpoint 001"; ddump();
+    Config::General::Init();
+    debug_info << "breakpoint 002"; ddump();
+    File::Read(steam_path + "\\userdata\\" + user_code + "\\730\\local\\cfg\\config.cfg", Config::General::Parse);
+    debug_info << "breakpoint 002"; ddump();
+    Config::General::UserMap();
     // fetch all config from <steam_path>\userdata\<usercode>\730\local\cfg\config.cfg
     // parse and store in unordered map
 

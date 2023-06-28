@@ -45,7 +45,12 @@ int main(int argc, char* argv[]) {
                 else if (std::string(argv[1]) == "-local" || std::string(argv[1]) == "-l") COMING_SOON();
                 else if (std::string(argv[1]) == "-version" || std::string(argv[1]) == "-v") Control::Version();
                 else if (std::string(argv[1]) == "-cfgversion" || std::string(argv[1]) == "-cv") Control::ConfigVersion();
-                else paramList();
+                else if (std::string(argv[1]) == "-debug") {
+                    dclear();
+                    debug_mode = true;
+                    debug_info << "debug_mode true"; ddump();
+                    Control::Auto();
+                } else paramList();
                 break;
 
             case 3: // double params
@@ -62,18 +67,24 @@ int main(int argc, char* argv[]) {
         }
 
     } catch (Exceptions::Error error) {
+        debug_info << "Exceptions::Error start"; ddump();
         Exceptions::perr(error);
+        debug_info << "Exceptions::Error end"; ddump();
         return 1;
 
     } catch (std::exception& except) {
+        debug_info << "std::exception& start"; ddump();
         Exceptions::Error error = Exceptions::System::kStdException;
         error.message = except.what();
         Exceptions::perr(error);
+        debug_info << "std::exception& end"; ddump();
         return 1;
 
     } catch (...) {
+        debug_info << "unknown error start"; ddump();
         Exceptions::Error error = Exceptions::System::kUnknownError;
         Exceptions::perr(error);
+        debug_info << "unknown error end"; ddump();
         return 1;
     }
     // system("pause");
