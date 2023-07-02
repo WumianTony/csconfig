@@ -32,6 +32,7 @@ bool isDebug();
 #include "exceptions.h"
 // control
 #include "ctrl.h"
+extern std::string steam_path, user_code;
 // other
 #include "fileio.h"
 

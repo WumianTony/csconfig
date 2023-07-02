@@ -4,9 +4,11 @@
 #include "global.h"
 
 namespace File {
-    std::string fetchUserNickname(std::string steam_path, std::string user_code);
+    std::string fetchUserNickname(std::string user);
 
     void Read(std::string file_path, void (func)(std::string) = [](std::string temp) {});
+
+    void Write(std::unordered_map<std::string, std::stringstream> buffer);
 }
 
 #endif

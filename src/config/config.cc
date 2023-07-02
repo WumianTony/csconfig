@@ -11,7 +11,7 @@ Index Alias::user_i;
 std::vector<std::string> General::user_ignore;
 
 void General::Init() {
-    
+    // stays empty  
 }
 
 void General::UserMap() {
@@ -92,4 +92,39 @@ void General::Parse(std::string raw_cfg_line) {
     }
 }
 
+std::string Arg::_to_str() {
+    return this->name + ' ' + this->value;
+}
+
+std::string Arg::to_str() {
+    return this->name + " \"" + this->value + "\"";
+}
+
+std::string Toggle::_to_str() {
+    return "toggle " + this->arg_name + " " + this->from + " " + this->to;
+}
+
+std::string Commands::to_str() {
+    std::vector<std::string> buffer;
+    for (auto each : this->commands) buffer.push_back(each);
+    for (auto each : this->args) buffer.push_back(each._to_str());
+    for (auto each : this->toggles) buffer.push_back(each._to_str());
+    std::string result = buffer[0];
+    for (int i = 1; i < buffer.size(); i ++) result += "; " + buffer[i];
+    return result;
+}
+
+std::string Bind::to_str() {
+    return "bind \"" + this->key + "\" \"" + this->command_serial.to_str() + "\"";
+}
+
+std::string Alias::to_str() {
+    return "alias \"" + this->name + "\" \"" + this->command_serial.to_str() + "\"";
+}
+
+std::unordered_map<std::string, std::stringstream> General::getBuffer() {
+    std::unordered_map<std::string, std::stringstream> buffer;
+    
+    return buffer;
+}
 }

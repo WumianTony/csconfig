@@ -18,7 +18,8 @@ public:
     static std::vector<Arg> default_;
     static Index default_i;
 
-    // std::string serialize();
+    std::string _to_str();
+    std::string to_str();
     static Arg _parse(std::string temp);
     static Arg parse(std::string temp);
     static Index index(std::vector<Arg> args);
@@ -31,7 +32,7 @@ public:
     std::string from;
     std::string to;
 
-    // std::string serialize();
+    std::string _to_str();
     static Toggle _parse(std::string temp);
 };
 
@@ -41,7 +42,7 @@ public:
     std::vector<Arg> args;             // 1
     std::vector<Toggle> toggles;       // 2
 
-    // std::string serialize();
+    std::string to_str();
     static Commands parse(std::string temp);
 };
 
@@ -57,7 +58,7 @@ public:
     static Index default_i;
     static Antimap default_anti;
 
-    // std::string serialize();
+    std::string to_str();
     static Bind parse(std::string temp);
     static Index index(std::vector<Bind> binds);
     static Antimap antimap(std::vector<Bind> binds);
@@ -75,7 +76,7 @@ public:
     static std::vector<Alias> user_;
     static Index user_i;
 
-    // std::string serialize();
+    std::string to_str();
     // static Alias parse(std::string temp);
     static Index index(std::vector<Alias> aliases);
 
@@ -98,7 +99,8 @@ public:
     static void Init();
     static void UserMap();
     static void Parse(std::string raw_cfg_line);
-    // std::string Serialize(Commands command_serial);
+    
+    static std::unordered_map<std::string, std::stringstream> getBuffer();
 };
 }
 

@@ -8,8 +8,12 @@ namespace Bash {
     bool isPathExist(std::string path);
 
     std::string fetchExecPath();
-    std::vector<std::string> fetchAllSteamPaths();
-    std::vector<std::string> fetchAllUsers(std::string steam_path);
+    std::vector<std::string> fetchAllSteamPaths(std::string suffix);
+    std::vector<std::string> fetchAllUsers();
+    int fetchLatestBackup();
+
+    void mkdir();
+    void newBackup(int backup_order);
 }
 
 #endif

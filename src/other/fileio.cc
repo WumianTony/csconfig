@@ -2,9 +2,9 @@
 
 namespace File {
 
-std::string fetchUserNickname(std::string steam_path, std::string user_code) {
+std::string fetchUserNickname(std::string user) {
     // std::locale::global(std::locale(""));
-    std::ifstream fin(steam_path + "/userdata/" + user_code + "/config/localconfig.vdf");
+    std::ifstream fin(steam_path + "/userdata/" + user + "/config/localconfig.vdf");
     if (!fin.is_open()) throw Exceptions::Steam::kBadFile;
     const std::string target = "\"PersonaName\"\t\t\"";
     std::string line;
@@ -32,6 +32,14 @@ void Read(std::string file_path, void (func)(std::string)) {
         std::getline(fin, line);
         debug_info << "line:\t" << line; ddump();
         func(line);
+    }
+}
+
+void Write(std::unordered_map<std::string, std::stringstream> buffer) {
+    for (const auto& [path, content] : buffer) {
+        std::ofstream fout(Const::Path::Package() + "\\" + path);
+        fout << content.str();
+        fout.close();
     }
 }
 

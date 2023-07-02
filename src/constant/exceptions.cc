@@ -14,6 +14,7 @@ std::string fetchScope(Error error) { // 目前不太能正常工作
 
 void perr(Error error) {
     // std::cerr << "[" << fetchScope(error) << "] " << error.message << std::endl;
+    system("cls");
     std::cerr << error.message << std::endl;
 }
 
