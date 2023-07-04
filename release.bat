@@ -1,3 +1,3 @@
 @echo off
-del ../csconfig.zip
-rar a -r ../csconfig.zip ./release
+del ..\csconfig.zip
+rar a -r ..\csconfig.zip .\release

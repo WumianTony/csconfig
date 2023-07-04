@@ -42,3 +42,7 @@ build/
 
 # Todo
 todo.md
+
+# Log
+debug_log.txt
+log.txt
