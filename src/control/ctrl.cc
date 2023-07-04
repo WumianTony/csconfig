@@ -75,8 +75,9 @@ void Auto() {
     // debug info
     system("cls");
     debug_info << steam_path << std::endl << user_code; ddump();
-    debug_info << "breakpoint 001"; ddump();
     Config::General::Init();
+    debug_info << "breakpoint 001"; ddump();
+    Config::General::Auto();
     debug_info << "breakpoint 002"; ddump();
 
     // fetch output path <steam_path>\steamapps\common\Counter-Strike Global Offensive\csgo\cfg

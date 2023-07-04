@@ -20,10 +20,13 @@ public:
 
     std::string _to_str();
     std::string to_str();
+
     static Arg _parse(std::string temp);
     static Arg parse(std::string temp);
     static Index index(std::vector<Arg> args);
     static Arg fetch(std::string name);
+
+    static void Auto();
 };
 
 class Toggle {
@@ -59,6 +62,7 @@ public:
     static Antimap default_anti;
 
     std::string to_str();
+
     static Bind parse(std::string temp);
     static Index index(std::vector<Bind> binds);
     static Antimap antimap(std::vector<Bind> binds);
@@ -66,6 +70,8 @@ public:
     static std::vector<Bind> antifetch(std::string target);
     // either command or arg_name, possible with multiple results
     static std::vector<Bind> Default();
+
+    static void Auto();
 };
 
 class Alias {
@@ -75,21 +81,29 @@ public:
 
     static std::vector<Alias> user_;
     static Index user_i;
+    static std::vector<Alias> cmd_;
+    static Index cmd_i;
 
     std::string to_str();
     // static Alias parse(std::string temp);
     static Index index(std::vector<Alias> aliases);
 
     // static std::vector<Alias> Default();
-    static void Load();
-    static void CustomCommands(std::vector<Alias>& aliases);
+    static void CustomCommands();
+    static void Auto();
 
+    // static Alias gyro();
+    // static Alias _gyro();
+    // static Alias _gyro_();
 private:
     static Alias std_crosshair();
+    static void std_crosshair_();
     static Alias util_crosshair();
     static Alias _util_left();
+    static void _util_left_();
     static Alias _util_right();
-    static Alias _gyro();
+    static void _util_right_();
+
 };
 
 class General {
@@ -100,6 +114,7 @@ public:
     static void UserMap();
     static void Parse(std::string raw_cfg_line);
     
+    static void Auto();
     static std::unordered_map<std::string, std::stringstream> getBuffer();
 };
 }

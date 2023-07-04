@@ -60,4 +60,10 @@ Arg Arg::fetch(std::string name) {
         return Arg::default_[Arg::default_i[name]];
     throw Exceptions::Config::kArgNotFound;
 }
+
+void Arg::Auto() {
+    for (auto& each : default_) {
+        each = fetch(each.name);
+    }
+}
 }

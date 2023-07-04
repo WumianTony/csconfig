@@ -8,19 +8,22 @@ std::vector<Bind> Bind::user_;
 Index Bind::user_i;
 Antimap Bind::user_anti;
 Index Alias::user_i;
+std::vector<Alias> Alias::cmd_;
+Index Alias::cmd_i;
 std::vector<std::string> General::user_ignore;
 
 void General::Init() {
+    Alias::CustomCommands();
     File::Read(Const::Path::UserCfg(), General::Parse);
     General::UserMap();
-    Alias::Load();
-    Alias::user_i = Alias::index(Alias::user_);
 }
 
 void General::UserMap() {
     Arg::user_i = Arg::index(Arg::user_);
     Bind::user_i = Bind::index(Bind::user_);
     Bind::user_anti = Bind::antimap(Bind::user_);
+    Alias::user_i = Alias::index(Alias::user_);
+    Alias::cmd_i = Alias::index(Alias::cmd_);
 }
 
 Arg Arg::_parse(std::string temp) {
@@ -70,7 +73,7 @@ Arg Arg::parse(std::string raw_cfg_line) {
     debug_info << "parseArg() " << raw_cfg_line.substr(0, quote - 1) << "|" << raw_cfg_line.substr(quote + 1, raw_cfg_line.size() - quote - 2); ddump();
     return {
         raw_cfg_line.substr(0, quote - 1),
-        raw_cfg_line.substr(quote + 1)
+        raw_cfg_line.substr(quote + 1, raw_cfg_line.size() - quote - 2)
     };
 }
 
@@ -78,7 +81,7 @@ Bind Bind::parse(std::string raw_cfg_line) {
     size_t quote_first = raw_cfg_line.find_first_of('\"');
     size_t quote_second = raw_cfg_line.find_first_of('\"', quote_first + 1);
     std::string key = raw_cfg_line.substr(quote_first + 1, quote_second - quote_first - 1);
-    debug_info << "parseBind() " << key << "|" << raw_cfg_line.substr(quote_second + 3); ddump();
+    debug_info << "parseBind() " << key << "|" << raw_cfg_line.substr(quote_second + 3, raw_cfg_line.size() - quote_second - 4); ddump();
     Commands command_serial = Commands::parse(raw_cfg_line.substr(quote_second + 3, raw_cfg_line.size() - quote_second - 4));
     return {key, command_serial};
 }
@@ -125,11 +128,13 @@ std::string Alias::to_str() {
     return "alias \"" + this->name + "\" \"" + this->command_serial.to_str() + "\"";
 }
 
-std::unordered_map<std::string, std::stringstream> General::getBuffer() {
-    std::unordered_map<std::string, std::stringstream> buffer;
-    
-    buffer["user\\args.cfg"];
-
-    return buffer;
+void General::Auto() {
+    debug_info << "auto 001"; ddump();
+    Arg::Auto();
+    debug_info << "auto 002"; ddump();
+    Bind::Auto();
+    debug_info << "auto 003"; ddump();
+    Alias::Auto();
+    debug_info << "auto 004"; ddump();
 }
 }
