@@ -11,7 +11,10 @@ Index Alias::user_i;
 std::vector<std::string> General::user_ignore;
 
 void General::Init() {
-    // stays empty  
+    File::Read(Const::Path::UserCfg(), General::Parse);
+    General::UserMap();
+    Alias::Load();
+    Alias::user_i = Alias::index(Alias::user_);
 }
 
 void General::UserMap() {
@@ -125,6 +128,8 @@ std::string Alias::to_str() {
 std::unordered_map<std::string, std::stringstream> General::getBuffer() {
     std::unordered_map<std::string, std::stringstream> buffer;
     
+    buffer["user\\args.cfg"];
+
     return buffer;
 }
 }

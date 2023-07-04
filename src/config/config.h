@@ -80,7 +80,7 @@ public:
     // static Alias parse(std::string temp);
     static Index index(std::vector<Alias> aliases);
 
-    static std::vector<Alias> Default();
+    // static std::vector<Alias> Default();
     static void Load();
     static void CustomCommands(std::vector<Alias>& aliases);
 

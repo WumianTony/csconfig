@@ -78,9 +78,6 @@ void Auto() {
     debug_info << "breakpoint 001"; ddump();
     Config::General::Init();
     debug_info << "breakpoint 002"; ddump();
-    File::Read(Const::Path::UserCfg(), Config::General::Parse);
-    debug_info << "breakpoint 002"; ddump();
-    Config::General::UserMap();
 
     // fetch output path <steam_path>\steamapps\common\Counter-Strike Global Offensive\csgo\cfg
     std::string cfg_path = Const::Path::GameCfg();
@@ -124,7 +121,11 @@ void Auto() {
     // inform user that everything is done
     system("cls");
     std::cout << "Congrats! Everything went well~\n";
+
+    // provide possible log and print to screen (also ask if file requires)
+
     system("pause");
+
 }
 
 }

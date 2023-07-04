@@ -27,7 +27,7 @@ std::vector<Alias> Alias::user_ = {
     Alias::util_crosshair(),
     util_left,
     util_right,
-    gyro,
+    gyro
 };
 
 Index Alias::index(std::vector<Alias> aliases) {
