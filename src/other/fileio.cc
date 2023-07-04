@@ -35,12 +35,35 @@ void Read(std::string file_path, void (func)(std::string)) {
     }
 }
 
+void Read(std::string file_path, std::vector<std::string>& buffer) {
+    std::ifstream fin(file_path);
+    std::string line;
+    while (!fin.eof()) {
+        std::getline(fin, line);
+        buffer.push_back(line);
+        debug_info << "line:\t" << line; ddump();
+    }
+}
+
 void Write(std::unordered_map<std::string, std::stringstream> buffer) {
     for (const auto& [path, content] : buffer) {
         std::ofstream fout(Const::Path::Package() + "\\" + path);
         fout << content.str();
         fout.close();
     }
+}
+
+void Log(std::map<std::string, std::string> log) {
+    debug_info << "log 001"; ddump();
+    std::ofstream fout("log.txt");
+    debug_info << "log 002"; ddump();
+    for (const auto& [key, info] : log) {
+        debug_info << "log 003 " << key << " " << info; ddump();
+        fout << std::setw(18) << std::setfill(' ') << key << "  " << info << std::endl;
+        debug_info << "log 004 "; ddump();
+    }
+    fout.close();
+    debug_info << "log 005"; ddump();
 }
 
 }

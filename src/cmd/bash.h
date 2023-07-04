@@ -14,6 +14,7 @@ namespace Bash {
 
     void mkdir();
     void newBackup(int backup_order);
+    void modifyAutoExec();
 }
 
 #endif

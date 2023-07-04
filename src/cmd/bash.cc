@@ -76,4 +76,15 @@ void newBackup(int backup_order) {
     Popen("xcopy /e/h/i/y \"" + directory_path + "\" \"" + target_path + '\"');
 }
 
+void modifyAutoExec() {
+    std::string autoexec_path = Const::Path::GameCfg() + "\\autoexec.cfg";
+    std::vector<std::string> buffer;
+    File::Read(autoexec_path, buffer);
+    if (std::find(buffer.begin(), buffer.end(), "exec wumiancfg-csgo/default") == buffer.end()) {
+        std::ofstream fout(autoexec_path, std::ios::app);
+        fout << "\nexec wumiancfg-csgo/default\n";
+        fout.close();
+    }
+}
+
 }

@@ -30,6 +30,10 @@ void ConfigVersion() {
 
 void Auto() {
     system("cls");
+    std::map<std::string, std::string> log = {
+        {"Release version", "v1.0"},
+        {"Config version", "v1.6"}
+    };
 
     // fetch steam path (CMD cd / & dir /s /b Steam)
     std::cout << "Fetching steam path ...\n(it might take quite long since it scans your whole disc from C:/)\n";
@@ -48,6 +52,7 @@ void Auto() {
                 steam_path = steam_paths[UI::MultiChoice("Multiple steam paths were detected.\nYou have to choose one of them.", steam_paths)];
         }
     }
+    log["Steam"] = steam_path;
 
     // fetch user code (CMD cd steampath/userdata & dir /b)
     std::vector<std::string> user_codes = Bash::fetchAllUsers();
@@ -58,17 +63,20 @@ void Auto() {
     for (auto each : user_codes) {
         users.push_back("[" + each + "] " + File::fetchUserNickname(each));
     }
+    int user_index;
     // ask user to make a choice of account
     switch (users.size()) {
         case 0:
             throw Exceptions::Steam::kUserNotFound;
         case 1:
-            user_code = user_codes[0];
+            user_index = 0;
             std::cout << "User: " << users[0] << std::endl;
             break;
         default:
-            user_code = user_codes[UI::MultiChoice("Multiple users were detected.\nYou have to choose one of them.", users)];
+            user_index = UI::MultiChoice("Multiple users were detected.\nYou have to choose one of them.", users);
     }
+    user_code = user_codes[user_index];
+    log["User"] = users[user_index];
 
     // fetch all config from <steam_path>\userdata\<usercode>\730\local\cfg\config.cfg
     // parse and store in unordered map
@@ -98,10 +106,13 @@ void Auto() {
         }
         cfg_path = Const::Path::GameCfg();
     }
+    log["Game config"] = cfg_path;
 
     // check if cfg\wumiancfg exist, if so, ask user to confirm (overwrite)
     // if not, CMD mkdir wumiancfg
+    log["First time"] = "true";
     if (Bash::isPathExist(Const::Path::Package())) {
+        log["First time"] = "false (with 1 backup generated)";
         if (UI::MultiChoice("You already have a version of wumiancfg-csgo.\nDo you want to overwrite (with a backup)?", {"No, i don't. (exit)", "Yes, please! (backup & continue)"}) == 0) {
             system("cls");
             std::cout << "Aborted (user option).\n";
@@ -118,15 +129,16 @@ void Auto() {
 
     // read cfg\autoexec.cfg, check if 'exec "wumiancfg/default"' exists
     // if not, add to the next line from the end of autoexec.cfg
+    Bash::modifyAutoExec();
 
     // inform user that everything is done
     system("cls");
     std::cout << "Congrats! Everything went well~\n";
-
     // provide possible log and print to screen (also ask if file requires)
-
+    debug_info << "log outside 001"; ddump();
+    File::Log(log);
+    debug_info << "log outside 002"; ddump();
     system("pause");
-
 }
 
 }
