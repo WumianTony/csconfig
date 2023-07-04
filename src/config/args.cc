@@ -16,7 +16,7 @@ std::vector<Arg> Arg::default_ = {
     {"cl_hud_color", "9"},
     {"hud_scaling", "0.85"},
     {"cl_hud_background_alpha", "0.50"},
-    {"cl_showpos", "0"},
+    // {"cl_showpos", "0"},
     {"net_graph", "1"},
     {"net_graphpos", "1"},
     {"cl_hud_radar_scale", "1"},

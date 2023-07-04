@@ -35,8 +35,7 @@ const std::string crosshair_args_name[] = {
     "cl_crosshair_drawoutline",
     "cl_crosshaircolor",
     "cl_crosshairsize",
-    "cl_crosshairthickness",
-    "cl_crosshairdot"
+    "cl_crosshairthickness"
 };
 
 Alias Alias::std_crosshair() {
@@ -57,15 +56,15 @@ void Alias::std_crosshair_() {
 
 Alias Alias::util_crosshair() {
     std::vector<Arg> crosshair_args;
-    for (int i = 0; i < 8; i ++) {
+    for (int i = 0; i < 7; i ++) {
         std::string arg_name = crosshair_args_name[i];
         int index = Arg::default_i[arg_name];
         auto arg = Arg::default_[index];
         crosshair_args.push_back(Arg::default_[Arg::default_i[crosshair_args_name[i]]]);
     }
-    crosshair_args.push_back({crosshair_args_name[8], "1"});
-    crosshair_args.push_back({crosshair_args_name[9], "3000"});
-    crosshair_args.push_back({crosshair_args_name[10], "0.1"});
+    crosshair_args.push_back({crosshair_args_name[7], "1"});
+    crosshair_args.push_back({crosshair_args_name[8], "3000"});
+    crosshair_args.push_back({crosshair_args_name[9], "0.1"});
     return {"util_crosshair", {{}, crosshair_args, {}}};
 }
 

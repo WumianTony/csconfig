@@ -13,17 +13,17 @@ std::vector<Bind> Bind::default_ = {
     {"mouse1", {{"+util_left"}, {}, {}}},
     {"mouse2", {{"+util_right"}, {}, {}}},
     {"4", {{"slot4", "util_crosshair"}, {}, {}}},
-    {"c", {{
+    {"v", {{
         "use weapon_knife", 
         "use weapon_flashbang", 
         "util_crosshair"
     }, {}, {}}},
-    {"x", {{
+    {"c", {{
         "use weapon_knife", 
         "use weapon_smokegrenade", 
         "util_crosshair"
     }, {}, {}}},
-    {"z", {{
+    {"x", {{
         "use weapon_knife", 
         "use weapon_molotov",
         "use weapon_incgrenade", 
