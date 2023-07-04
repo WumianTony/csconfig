@@ -1,0 +1,6 @@
+    Config version  v1.6
+        First time  false (with 1 backup generated)
+       Game config  C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg
+   Release version  v1.0
+             Steam  C:\Program Files (x86)\Steam
+              User  [1207716949] Toxic Noob

@@ -1,0 +1,1355 @@
+debug_mode true
+cd "C:\Program Files (x86)\Steam\userdata" & dir /b
+1016650181
+1207716949
+
+1016650181
+1207716949
+
+C:\Program Files (x86)\Steam
+1207716949
+C:\Program Files (x86)\Steam\userdata\1207716949\730\local\cfg\config.cfg
+114514?
+line:	cfgver "1"
+parseArg() cfgver|1
+line:	unbindall
+line:	bind "0" "bot_place"
+parseBind() 0|bot_place
+line:	bind "1" "slot1; std_crosshair"
+parseBind() 1|slot1; std_crosshair
+line:	bind "2" "slot2; std_crosshair"
+parseBind() 2|slot2; std_crosshair
+line:	bind "3" "slot3; std_crosshair"
+parseBind() 3|slot3; std_crosshair
+line:	bind "4" "slot4; util_crosshair"
+parseBind() 4|slot4; util_crosshair
+line:	bind "5" "slot5; std_crosshair"
+parseBind() 5|slot5; std_crosshair
+line:	bind "8" "sv_rethrow_last_grenade"
+parseBind() 8|sv_rethrow_last_grenade
+line:	bind "9" "ent_fire smokegrenade_projectile kill; record abc.abc; stop"
+parseBind() 9|ent_fire smokegrenade_projectile kill; record abc.abc; stop
+line:	bind "a" "+moveleft"
+parseBind() a|+moveleft
+line:	bind "b" "buymenu"
+parseBind() b|buymenu
+line:	bind "c" "sv_rethrow_last_grenade"
+parseBind() c|sv_rethrow_last_grenade
+line:	bind "d" "+moveright"
+parseBind() d|+moveright
+line:	bind "e" "+use"
+parseBind() e|+use
+line:	bind "f" "+lookatweapon"
+parseBind() f|+lookatweapon
+line:	bind "g" "drop"
+parseBind() g|drop
+line:	bind "k" "+voicerecord"
+parseBind() k|+voicerecord
+line:	bind "l" "toggle cl_righthand 0 1"
+parseBind() l|toggle cl_righthand 0 1
+_parseToggle() cl_righthand|0|1
+line:	bind "m" "teammenu"
+parseBind() m|teammenu
+line:	bind "o" "incrementvar cl_righthand 0 1 1"
+parseBind() o|incrementvar cl_righthand 0 1 1
+line:	bind "p" "+spray_menu"
+parseBind() p|+spray_menu
+line:	bind "q" "+jump; -attack; -attack2; -jump"
+parseBind() q|+jump; -attack; -attack2; -jump
+line:	bind "r" "+reload"
+parseBind() r|+reload
+line:	bind "s" "+back"
+parseBind() s|+back
+line:	bind "t" "messagemode"
+parseBind() t|messagemode
+line:	bind "u" "radio"
+parseBind() u|radio
+line:	bind "v" "toggle cl_crosshair_sniper_show_normal_inaccuracy 1 0; toggle mat_monitorgamma 1.6 2.0"
+parseBind() v|toggle cl_crosshair_sniper_show_normal_inaccuracy 1 0; toggle mat_monitorgamma 1.6 2.0
+_parseToggle() cl_crosshair_sniper_show_normal_inaccuracy|1|0
+_parseToggle() mat_monitorgamma|1.6|2.0
+line:	bind "w" "+forward"
+parseBind() w|+forward
+line:	bind "x" "ent_fire smokegrenade_projectile kill; record abc.abc; stop"
+parseBind() x|ent_fire smokegrenade_projectile kill; record abc.abc; stop
+line:	bind "y" "messagemode2"
+parseBind() y|messagemode2
+line:	bind "z" "bot_place"
+parseBind() z|bot_place
+line:	bind "`" "toggleconsole"
+parseBind() `|toggleconsole
+line:	bind "-" "bot_kick; bot_add"
+parseBind() -|bot_kick; bot_add
+line:	bind "=" "bot_add wolf; bot_add kyle; bot_add gunner; bot_add quade; bot_add vitaliy; bot_add brett; bot_add steel; bot_add cliffe; bot_add arnold"
+parseBind() =|bot_add wolf; bot_add kyle; bot_add gunner; bot_add quade; bot_add vitaliy; bot_add brett; bot_add steel; bot_add cliffe; bot_add arnold
+line:	bind "SPACE" "+jump"
+parseBind() SPACE|+jump
+line:	bind "TAB" "+showscores"
+parseBind() TAB|+showscores
+line:	bind "CAPSLOCK" "lastinv; std_crosshair"
+parseBind() CAPSLOCK|lastinv; std_crosshair
+line:	bind "ESCAPE" "cancelselect"
+parseBind() ESCAPE|cancelselect
+line:	bind "DEL" "+mute"
+parseBind() DEL|+mute
+line:	bind "PAUSE" "pause"
+parseBind() PAUSE|pause
+line:	bind "SHIFT" "+speed"
+parseBind() SHIFT|+speed
+line:	bind "ALT" "noclip"
+parseBind() ALT|noclip
+line:	bind "CTRL" "+duck"
+parseBind() CTRL|+duck
+line:	bind "F3" "askconnect_accept"
+parseBind() F3|askconnect_accept
+line:	bind "F4" "slot12; std_crosshair"
+parseBind() F4|slot12; std_crosshair
+line:	bind "F5" "jpeg"
+parseBind() F5|jpeg
+line:	bind "F6" "save quick"
+parseBind() F6|save quick
+line:	bind "F7" "load quick"
+parseBind() F7|load quick
+line:	bind "F10" "quit prompt"
+parseBind() F10|quit prompt
+line:	bind "MOUSE1" "+util_left"
+parseBind() MOUSE1|+util_left
+line:	bind "MOUSE2" "+util_right"
+parseBind() MOUSE2|+util_right
+line:	bind "MOUSE3" "player_ping"
+parseBind() MOUSE3|player_ping
+line:	bind "MWHEELUP" "+jump"
+parseBind() MWHEELUP|+jump
+line:	bind "MWHEELDOWN" "+jump"
+parseBind() MWHEELDOWN|+jump
+line:	@panorama_debug_overlay_opacity "0.8"
+parseArg() @panorama_debug_overlay_opacity|0.8
+line:	adsp_debug "0"
+parseArg() adsp_debug|0
+line:	ai_report_task_timings_on_limit "0"
+parseArg() ai_report_task_timings_on_limit|0
+line:	ai_think_limit_label "0"
+parseArg() ai_think_limit_label|0
+line:	aim_flickstick_circular_deadzone_max "0.94"
+parseArg() aim_flickstick_circular_deadzone_max|0.94
+line:	aim_flickstick_circular_deadzone_min "0.74"
+parseArg() aim_flickstick_circular_deadzone_min|0.74
+line:	aim_flickstick_crank_sensitivity "1.0"
+parseArg() aim_flickstick_crank_sensitivity|1.0
+line:	aim_flickstick_crank_tightness "40.0"
+parseArg() aim_flickstick_crank_tightness|40.0
+line:	aim_flickstick_enabled "0"
+parseArg() aim_flickstick_enabled|0
+line:	aim_flickstick_flick_snap_mode "0"
+parseArg() aim_flickstick_flick_snap_mode|0
+line:	aim_flickstick_flick_tightness "0.6"
+parseArg() aim_flickstick_flick_tightness|0.6
+line:	aim_flickstick_forward_deadzone "7.0"
+parseArg() aim_flickstick_forward_deadzone|7.0
+line:	aim_flickstick_release_dampen_speed "2.0f"
+parseArg() aim_flickstick_release_dampen_speed|2.0f
+line:	aim_gyro_acceleration "1"
+parseArg() aim_gyro_acceleration|1
+line:	aim_gyro_base_sensitivity "2.5"
+parseArg() aim_gyro_base_sensitivity|2.5
+line:	aim_gyro_circular_deadzone "0.0"
+parseArg() aim_gyro_circular_deadzone|0.0
+line:	aim_gyro_conversion_mode "0"
+parseArg() aim_gyro_conversion_mode|0
+line:	aim_gyro_enable_mode "0"
+parseArg() aim_gyro_enable_mode|0
+line:	aim_gyro_high_sense_multiplier "2.0"
+parseArg() aim_gyro_high_sense_multiplier|2.0
+line:	aim_gyro_high_sense_speed "360.0"
+parseArg() aim_gyro_high_sense_speed|360.0
+line:	aim_gyro_invert_pitch "1"
+parseArg() aim_gyro_invert_pitch|1
+line:	aim_gyro_invert_yaw "0"
+parseArg() aim_gyro_invert_yaw|0
+line:	aim_gyro_low_sense_speed "7.5"
+parseArg() aim_gyro_low_sense_speed|7.5
+line:	aim_gyro_pitchyaw_ratio "0.5"
+parseArg() aim_gyro_pitchyaw_ratio|0.5
+line:	aim_gyro_precision_speed "0.75"
+parseArg() aim_gyro_precision_speed|0.75
+line:	aim_gyro_raw "0"
+parseArg() aim_gyro_raw|0
+line:	aim_gyro_ray_angle "-45"
+parseArg() aim_gyro_ray_angle|-45
+line:	aim_gyro_siapi_convert_pixels_to_angles "25.50"
+parseArg() aim_gyro_siapi_convert_pixels_to_angles|25.50
+line:	aim_gyro_siapi_sensitivity_setting "600"
+parseArg() aim_gyro_siapi_sensitivity_setting|600
+line:	aim_gyro_siapi_vertical_scale_setting "100"
+parseArg() aim_gyro_siapi_vertical_scale_setting|100
+line:	aim_gyro_square_deadzone_pitch "0.0"
+parseArg() aim_gyro_square_deadzone_pitch|0.0
+line:	aim_gyro_square_deadzone_yaw "0.0"
+parseArg() aim_gyro_square_deadzone_yaw|0.0
+line:	aim_gyro_zoom_dampening_level1 "0.8"
+parseArg() aim_gyro_zoom_dampening_level1|0.8
+line:	aim_gyro_zoom_dampening_level2 "0.6"
+parseArg() aim_gyro_zoom_dampening_level2|0.6
+line:	aim_stick_circular_deadzone_max "0.94"
+parseArg() aim_stick_circular_deadzone_max|0.94
+line:	aim_stick_circular_deadzone_min "0.17"
+parseArg() aim_stick_circular_deadzone_min|0.17
+line:	aim_stick_extra_turning_delay "0.0"
+parseArg() aim_stick_extra_turning_delay|0.0
+line:	aim_stick_extra_turning_ramp_up_time "0.5"
+parseArg() aim_stick_extra_turning_ramp_up_time|0.5
+line:	aim_stick_extra_yaw "60.0"
+parseArg() aim_stick_extra_yaw|60.0
+line:	aim_stick_invert_pitch "0"
+parseArg() aim_stick_invert_pitch|0
+line:	aim_stick_invert_yaw "0"
+parseArg() aim_stick_invert_yaw|0
+line:	aim_stick_rate_pitch "125.0"
+parseArg() aim_stick_rate_pitch|125.0
+line:	aim_stick_rate_yaw "165.0"
+parseArg() aim_stick_rate_yaw|165.0
+line:	aim_stick_response_curve "1.6"
+parseArg() aim_stick_response_curve|1.6
+line:	aim_stick_square_deadzone_pitch "0.0"
+parseArg() aim_stick_square_deadzone_pitch|0.0
+line:	aim_stick_square_deadzone_yaw "0.0"
+parseArg() aim_stick_square_deadzone_yaw|0.0
+line:	aim_stick_zoom_dampening_level1 "0.8"
+parseArg() aim_stick_zoom_dampening_level1|0.8
+line:	aim_stick_zoom_dampening_level2 "0.6"
+parseArg() aim_stick_zoom_dampening_level2|0.6
+line:	aim_touchpad_circular_deadzone_min "0.0"
+parseArg() aim_touchpad_circular_deadzone_min|0.0
+line:	aim_touchpad_invert_pitch ""
+parseArg() aim_touchpad_invert_pitch|
+line:	aim_touchpad_invert_yaw ""
+parseArg() aim_touchpad_invert_yaw|
+line:	aim_touchpad_sensitivity_pitch "20.0"
+parseArg() aim_touchpad_sensitivity_pitch|20.0
+line:	aim_touchpad_sensitivity_yaw "21.0"
+parseArg() aim_touchpad_sensitivity_yaw|21.0
+line:	aim_touchpad_square_deadzone_pitch "0.0"
+parseArg() aim_touchpad_square_deadzone_pitch|0.0
+line:	aim_touchpad_square_deadzone_yaw "0.0"
+parseArg() aim_touchpad_square_deadzone_yaw|0.0
+line:	aim_touchpad_zoom_dampening_level1 "0.8"
+parseArg() aim_touchpad_zoom_dampening_level1|0.8
+line:	aim_touchpad_zoom_dampening_level2 "0.6"
+parseArg() aim_touchpad_zoom_dampening_level2|0.6
+line:	budget_averages_window "30"
+parseArg() budget_averages_window|30
+line:	budget_background_alpha "128"
+parseArg() budget_background_alpha|128
+line:	budget_bargraph_background_alpha "128"
+parseArg() budget_bargraph_background_alpha|128
+line:	budget_bargraph_range_ms "16.6666666667"
+parseArg() budget_bargraph_range_ms|16.6666666667
+line:	budget_history_numsamplesvisible "100"
+parseArg() budget_history_numsamplesvisible|100
+line:	budget_history_range_ms "66.666666667"
+parseArg() budget_history_range_ms|66.666666667
+line:	budget_panel_bottom_of_history_fraction ".25"
+parseArg() budget_panel_bottom_of_history_fraction|.25
+line:	budget_panel_height "384"
+parseArg() budget_panel_height|384
+line:	budget_panel_width "512"
+parseArg() budget_panel_width|512
+line:	budget_panel_x "0"
+parseArg() budget_panel_x|0
+line:	budget_panel_y "50"
+parseArg() budget_panel_y|50
+line:	budget_peaks_window "30"
+parseArg() budget_peaks_window|30
+line:	budget_show_averages "0"
+parseArg() budget_show_averages|0
+line:	budget_show_history "1"
+parseArg() budget_show_history|1
+line:	budget_show_peaks "1"
+parseArg() budget_show_peaks|1
+line:	bugreporter_uploadasync "0"
+parseArg() bugreporter_uploadasync|0
+line:	bugreporter_username ""
+parseArg() bugreporter_username|
+line:	c_maxdistance "200"
+parseArg() c_maxdistance|200
+line:	c_maxpitch "90"
+parseArg() c_maxpitch|90
+line:	c_maxyaw "135"
+parseArg() c_maxyaw|135
+line:	c_mindistance "30"
+parseArg() c_mindistance|30
+line:	c_minpitch "0"
+parseArg() c_minpitch|0
+line:	c_minyaw "-135"
+parseArg() c_minyaw|-135
+line:	c_orthoheight "100"
+parseArg() c_orthoheight|100
+line:	c_orthowidth "100"
+parseArg() c_orthowidth|100
+line:	c_thirdpersonshoulder "false"
+parseArg() c_thirdpersonshoulder|false
+line:	c_thirdpersonshoulderaimdist "120.0"
+parseArg() c_thirdpersonshoulderaimdist|120.0
+line:	c_thirdpersonshoulderdist "40.0"
+parseArg() c_thirdpersonshoulderdist|40.0
+line:	c_thirdpersonshoulderheight "5.0"
+parseArg() c_thirdpersonshoulderheight|5.0
+line:	c_thirdpersonshoulderoffset "20.0"
+parseArg() c_thirdpersonshoulderoffset|20.0
+line:	cachedvalue_count_partybrowser "1688297227"
+parseArg() cachedvalue_count_partybrowser|1688297227
+line:	cachedvalue_count_teammates "1688185874"
+parseArg() cachedvalue_count_teammates|1688185874
+line:	cam_collision "1"
+parseArg() cam_collision|1
+line:	cam_idealdelta "4.0"
+parseArg() cam_idealdelta|4.0
+line:	cam_idealdist "150"
+parseArg() cam_idealdist|150
+line:	cam_idealdistright "0"
+parseArg() cam_idealdistright|0
+line:	cam_idealdistup "0"
+parseArg() cam_idealdistup|0
+line:	cam_ideallag "4.0"
+parseArg() cam_ideallag|4.0
+line:	cam_idealpitch "0"
+parseArg() cam_idealpitch|0
+line:	cam_idealyaw "0"
+parseArg() cam_idealyaw|0
+line:	cam_snapto "0"
+parseArg() cam_snapto|0
+line:	cc_lang ""
+parseArg() cc_lang|
+line:	cc_linger_time "1.0"
+parseArg() cc_linger_time|1.0
+line:	cc_predisplay_time "0.25"
+parseArg() cc_predisplay_time|0.25
+line:	cc_subtitles "0"
+parseArg() cc_subtitles|0
+line:	chet_debug_idle "0"
+parseArg() chet_debug_idle|0
+line:	cl_allowdownload "1"
+parseArg() cl_allowdownload|1
+line:	cl_allowupload "1"
+parseArg() cl_allowupload|1
+line:	cl_autohelp "1"
+parseArg() cl_autohelp|1
+line:	cl_autowepswitch "0"
+parseArg() cl_autowepswitch|0
+line:	cl_bob_lower_amt "5"
+parseArg() cl_bob_lower_amt|5
+line:	cl_bobamt_lat "0.1"
+parseArg() cl_bobamt_lat|0.1
+line:	cl_bobamt_vert "0.1"
+parseArg() cl_bobamt_vert|0.1
+line:	cl_bobcycle "0.98"
+parseArg() cl_bobcycle|0.98
+line:	cl_buywheel_donate_key "0"
+parseArg() cl_buywheel_donate_key|0
+line:	cl_buywheel_nomousecentering "0"
+parseArg() cl_buywheel_nomousecentering|0
+line:	cl_buywheel_nonumberpurchasing "0"
+parseArg() cl_buywheel_nonumberpurchasing|0
+line:	cl_chatfilter_version "1"
+parseArg() cl_chatfilter_version|1
+line:	cl_chatfilters "63"
+parseArg() cl_chatfilters|63
+line:	cl_clanid "43501542"
+parseArg() cl_clanid|43501542
+line:	cl_cmdrate "128"
+parseArg() cl_cmdrate|128
+line:	cl_color "1"
+parseArg() cl_color|1
+line:	cl_compass_enabled "1"
+parseArg() cl_compass_enabled|1
+line:	cl_crosshair_drawoutline "0"
+parseArg() cl_crosshair_drawoutline|0
+line:	cl_crosshair_dynamic_maxdist_splitratio "0.35"
+parseArg() cl_crosshair_dynamic_maxdist_splitratio|0.35
+line:	cl_crosshair_dynamic_splitalpha_innermod "1"
+parseArg() cl_crosshair_dynamic_splitalpha_innermod|1
+line:	cl_crosshair_dynamic_splitalpha_outermod "0.5"
+parseArg() cl_crosshair_dynamic_splitalpha_outermod|0.5
+line:	cl_crosshair_dynamic_splitdist "7"
+parseArg() cl_crosshair_dynamic_splitdist|7
+line:	cl_crosshair_friendly_warning "2"
+parseArg() cl_crosshair_friendly_warning|2
+line:	cl_crosshair_outlinethickness "0"
+parseArg() cl_crosshair_outlinethickness|0
+line:	cl_crosshair_sniper_show_normal_inaccuracy "1"
+parseArg() cl_crosshair_sniper_show_normal_inaccuracy|1
+line:	cl_crosshair_sniper_width "2"
+parseArg() cl_crosshair_sniper_width|2
+line:	cl_crosshair_t "0"
+parseArg() cl_crosshair_t|0
+line:	cl_crosshairalpha "255"
+parseArg() cl_crosshairalpha|255
+line:	cl_crosshaircolor "4"
+parseArg() cl_crosshaircolor|4
+line:	cl_crosshaircolor_b "50"
+parseArg() cl_crosshaircolor_b|50
+line:	cl_crosshaircolor_g "250"
+parseArg() cl_crosshaircolor_g|250
+line:	cl_crosshaircolor_r "50"
+parseArg() cl_crosshaircolor_r|50
+line:	cl_crosshairdot "1"
+parseArg() cl_crosshairdot|1
+line:	cl_crosshairgap "-3.0000001192092880"
+parseArg() cl_crosshairgap|-3.0000001192092880
+line:	cl_crosshairgap_useweaponvalue "0"
+parseArg() cl_crosshairgap_useweaponvalue|0
+line:	cl_crosshairsize "0"
+parseArg() cl_crosshairsize|0
+line:	cl_crosshairstyle "4"
+parseArg() cl_crosshairstyle|4
+line:	cl_crosshairthickness "1"
+parseArg() cl_crosshairthickness|1
+line:	cl_crosshairusealpha "1"
+parseArg() cl_crosshairusealpha|1
+line:	cl_debugrumble "0"
+parseArg() cl_debugrumble|0
+line:	cl_detail_avoid_force "0.4"
+parseArg() cl_detail_avoid_force|0.4
+line:	cl_detail_avoid_radius "64"
+parseArg() cl_detail_avoid_radius|64
+line:	cl_detail_avoid_recover_speed "0.25"
+parseArg() cl_detail_avoid_recover_speed|0.25
+line:	cl_detail_max_sway "5"
+parseArg() cl_detail_max_sway|5
+line:	cl_disable_round_end_report "0"
+parseArg() cl_disable_round_end_report|0
+line:	cl_disablefreezecam "0"
+parseArg() cl_disablefreezecam|0
+line:	cl_disablehtmlmotd "0"
+parseArg() cl_disablehtmlmotd|0
+line:	cl_dm_buyrandomweapons "0"
+parseArg() cl_dm_buyrandomweapons|0
+line:	cl_downloadfilter "all"
+parseArg() cl_downloadfilter|all
+line:	cl_dz_playagain_auto_spectate "0"
+parseArg() cl_dz_playagain_auto_spectate|0
+line:	cl_embedded_stream_audio_volume "60"
+parseArg() cl_embedded_stream_audio_volume|60
+line:	cl_embedded_stream_audio_volume_xmaster "1"
+parseArg() cl_embedded_stream_audio_volume_xmaster|1
+line:	cl_fixedcrosshairgap "3"
+parseArg() cl_fixedcrosshairgap|3
+line:	cl_freezecampanel_position_dynamic "1"
+parseArg() cl_freezecampanel_position_dynamic|1
+line:	cl_grass_mip_bias "-0.5"
+parseArg() cl_grass_mip_bias|-0.5
+line:	cl_hide_avatar_images "0"
+parseArg() cl_hide_avatar_images|0
+line:	cl_hud_background_alpha "0.50"
+parseArg() cl_hud_background_alpha|0.50
+line:	cl_hud_bomb_under_radar "1"
+parseArg() cl_hud_bomb_under_radar|1
+line:	cl_hud_color "9"
+parseArg() cl_hud_color|9
+line:	cl_hud_healthammo_style "0"
+parseArg() cl_hud_healthammo_style|0
+line:	cl_hud_playercount_pos "0"
+parseArg() cl_hud_playercount_pos|0
+line:	cl_hud_playercount_showcount "0"
+parseArg() cl_hud_playercount_showcount|0
+line:	cl_hud_radar_scale "1"
+parseArg() cl_hud_radar_scale|1
+line:	cl_idealpitchscale "0.8"
+parseArg() cl_idealpitchscale|0.8
+line:	cl_inventory_radial_immediate_select "1"
+parseArg() cl_inventory_radial_immediate_select|1
+line:	cl_inventory_radial_tap_to_cycle "1"
+parseArg() cl_inventory_radial_tap_to_cycle|1
+line:	cl_inventory_saved_filter2 "all"
+parseArg() cl_inventory_saved_filter2|all
+line:	cl_inventory_saved_sort2 "inv_sort_rarity"
+parseArg() cl_inventory_saved_sort2|inv_sort_rarity
+line:	cl_invites_only_friends "0"
+parseArg() cl_invites_only_friends|0
+line:	cl_invites_only_mainmenu "0"
+parseArg() cl_invites_only_mainmenu|0
+line:	cl_itemimages_dynamically_generated "2"
+parseArg() cl_itemimages_dynamically_generated|2
+line:	cl_join_advertise "1"
+parseArg() cl_join_advertise|1
+line:	cl_minimal_rtt_shadows "1"
+parseArg() cl_minimal_rtt_shadows|1
+line:	cl_mouselook "1"
+parseArg() cl_mouselook|1
+line:	cl_mute_all_but_friends_and_party "0"
+parseArg() cl_mute_all_but_friends_and_party|0
+line:	cl_mute_enemy_team "0"
+parseArg() cl_mute_enemy_team|0
+line:	cl_obs_interp_enable "1"
+parseArg() cl_obs_interp_enable|1
+line:	cl_observed_bot_crosshair "0"
+parseArg() cl_observed_bot_crosshair|0
+line:	cl_observercrosshair "1"
+parseArg() cl_observercrosshair|1
+line:	cl_parachute_autodeploy "1"
+parseArg() cl_parachute_autodeploy|1
+line:	cl_ping_fade_deadzone "60"
+parseArg() cl_ping_fade_deadzone|60
+line:	cl_ping_fade_distance "300"
+parseArg() cl_ping_fade_distance|300
+line:	cl_player_ping_mute "0"
+parseArg() cl_player_ping_mute|0
+line:	cl_playerspray_auto_apply "1"
+parseArg() cl_playerspray_auto_apply|1
+line:	cl_promoted_settings_acknowledged "0:0"
+parseArg() cl_promoted_settings_acknowledged|0:0
+line:	cl_quickinventory_filename "radial_quickinventory.txt"
+parseArg() cl_quickinventory_filename|radial_quickinventory.txt
+line:	cl_quickinventory_lastinv "1"
+parseArg() cl_quickinventory_lastinv|1
+line:	cl_quickinventory_line_update_speed "65.0f"
+parseArg() cl_quickinventory_line_update_speed|65.0f
+line:	cl_radar_always_centered "1"
+parseArg() cl_radar_always_centered|1
+line:	cl_radar_icon_scale_min "0.6"
+parseArg() cl_radar_icon_scale_min|0.6
+line:	cl_radar_rotate "1"
+parseArg() cl_radar_rotate|1
+line:	cl_radar_scale "0.4"
+parseArg() cl_radar_scale|0.4
+line:	cl_radar_square_with_scoreboard "1"
+parseArg() cl_radar_square_with_scoreboard|1
+line:	cl_radial_radio_tab_0_text_1 "#Chatwheel_requestspend"
+parseArg() cl_radial_radio_tab_0_text_1|#Chatwheel_requestspend
+line:	cl_radial_radio_tab_0_text_2 "#Chatwheel_requestweapon"
+parseArg() cl_radial_radio_tab_0_text_2|#Chatwheel_requestweapon
+line:	cl_radial_radio_tab_0_text_3 "#Chatwheel_bplan"
+parseArg() cl_radial_radio_tab_0_text_3|#Chatwheel_bplan
+line:	cl_radial_radio_tab_0_text_4 "#Chatwheel_followingyou"
+parseArg() cl_radial_radio_tab_0_text_4|#Chatwheel_followingyou
+line:	cl_radial_radio_tab_0_text_5 "#Chatwheel_midplan"
+parseArg() cl_radial_radio_tab_0_text_5|#Chatwheel_midplan
+line:	cl_radial_radio_tab_0_text_6 "#Chatwheel_followme"
+parseArg() cl_radial_radio_tab_0_text_6|#Chatwheel_followme
+line:	cl_radial_radio_tab_0_text_7 "#Chatwheel_aplan"
+parseArg() cl_radial_radio_tab_0_text_7|#Chatwheel_aplan
+line:	cl_radial_radio_tab_0_text_8 "#Chatwheel_requestecoround"
+parseArg() cl_radial_radio_tab_0_text_8|#Chatwheel_requestecoround
+line:	cl_radial_radio_tab_1_text_1 "#Chatwheel_enemyspotted"
+parseArg() cl_radial_radio_tab_1_text_1|#Chatwheel_enemyspotted
+line:	cl_radial_radio_tab_1_text_2 "#Chatwheel_needbackup"
+parseArg() cl_radial_radio_tab_1_text_2|#Chatwheel_needbackup
+line:	cl_radial_radio_tab_1_text_3 "#Chatwheel_bplan"
+parseArg() cl_radial_radio_tab_1_text_3|#Chatwheel_bplan
+line:	cl_radial_radio_tab_1_text_4 "#Chatwheel_bombcarrierspotted"
+parseArg() cl_radial_radio_tab_1_text_4|#Chatwheel_bombcarrierspotted
+line:	cl_radial_radio_tab_1_text_5 "#Chatwheel_multipleenemieshere"
+parseArg() cl_radial_radio_tab_1_text_5|#Chatwheel_multipleenemieshere
+line:	cl_radial_radio_tab_1_text_6 "#Chatwheel_sniperspotted"
+parseArg() cl_radial_radio_tab_1_text_6|#Chatwheel_sniperspotted
+line:	cl_radial_radio_tab_1_text_7 "#Chatwheel_aplan"
+parseArg() cl_radial_radio_tab_1_text_7|#Chatwheel_aplan
+line:	cl_radial_radio_tab_1_text_8 "#Chatwheel_inposition"
+parseArg() cl_radial_radio_tab_1_text_8|#Chatwheel_inposition
+line:	cl_radial_radio_tab_2_text_1 "#Chatwheel_affirmative"
+parseArg() cl_radial_radio_tab_2_text_1|#Chatwheel_affirmative
+line:	cl_radial_radio_tab_2_text_2 "#Chatwheel_negative"
+parseArg() cl_radial_radio_tab_2_text_2|#Chatwheel_negative
+line:	cl_radial_radio_tab_2_text_3 "#Chatwheel_compliment"
+parseArg() cl_radial_radio_tab_2_text_3|#Chatwheel_compliment
+line:	cl_radial_radio_tab_2_text_4 "#Chatwheel_thanks"
+parseArg() cl_radial_radio_tab_2_text_4|#Chatwheel_thanks
+line:	cl_radial_radio_tab_2_text_5 "#Chatwheel_cheer"
+parseArg() cl_radial_radio_tab_2_text_5|#Chatwheel_cheer
+line:	cl_radial_radio_tab_2_text_6 "#Chatwheel_peptalk"
+parseArg() cl_radial_radio_tab_2_text_6|#Chatwheel_peptalk
+line:	cl_radial_radio_tab_2_text_7 "#Chatwheel_sorry"
+parseArg() cl_radial_radio_tab_2_text_7|#Chatwheel_sorry
+line:	cl_radial_radio_tab_2_text_8 "#Chatwheel_sectorclear"
+parseArg() cl_radial_radio_tab_2_text_8|#Chatwheel_sectorclear
+line:	cl_radial_radio_tap_to_ping "1"
+parseArg() cl_radial_radio_tap_to_ping|1
+line:	cl_radial_radio_version_reset "12"
+parseArg() cl_radial_radio_version_reset|12
+line:	cl_radialmenu_deadzone_size_joystick "0.17"
+parseArg() cl_radialmenu_deadzone_size_joystick|0.17
+line:	cl_righthand "1"
+parseArg() cl_righthand|1
+line:	cl_rumblescale "1.0"
+parseArg() cl_rumblescale|1.0
+line:	cl_sanitize_player_names "0"
+parseArg() cl_sanitize_player_names|0
+line:	cl_scoreboard_mouse_enable_binding "+attack2"
+parseArg() cl_scoreboard_mouse_enable_binding|+attack2
+line:	cl_scoreboard_survivors_always_on "0"
+parseArg() cl_scoreboard_survivors_always_on|0
+line:	cl_show_clan_in_death_notice "1"
+parseArg() cl_show_clan_in_death_notice|1
+line:	cl_show_observer_crosshair "1"
+parseArg() cl_show_observer_crosshair|1
+line:	cl_showhelp "1"
+parseArg() cl_showhelp|1
+line:	cl_showloadout "0"
+parseArg() cl_showloadout|0
+line:	cl_showpluginmessages2 "0"
+parseArg() cl_showpluginmessages2|0
+line:	cl_sniper_delay_unscope "0"
+parseArg() cl_sniper_delay_unscope|0
+line:	cl_spec_follow_grenade_key "2"
+parseArg() cl_spec_follow_grenade_key|2
+line:	cl_spec_mode "5"
+parseArg() cl_spec_mode|5
+line:	cl_tablet_mapmode "1"
+parseArg() cl_tablet_mapmode|1
+line:	cl_teamid_overhead_mode "2"
+parseArg() cl_teamid_overhead_mode|2
+line:	cl_teammate_colors_show "1"
+parseArg() cl_teammate_colors_show|1
+line:	cl_thirdperson "0"
+parseArg() cl_thirdperson|0
+line:	cl_timeout "30"
+parseArg() cl_timeout|30
+line:	cl_updaterate "64.000000"
+parseArg() cl_updaterate|64.000000
+line:	cl_use_opens_buy_menu "0"
+parseArg() cl_use_opens_buy_menu|0
+line:	cl_versus_intro "1"
+parseArg() cl_versus_intro|1
+line:	cl_viewmodel_shift_left_amt "1.5"
+parseArg() cl_viewmodel_shift_left_amt|1.5
+line:	cl_viewmodel_shift_right_amt "0.75"
+parseArg() cl_viewmodel_shift_right_amt|0.75
+line:	closecaption "0"
+parseArg() closecaption|0
+line:	closeonbuy "0"
+parseArg() closeonbuy|0
+line:	commentary_firstrun "0"
+parseArg() commentary_firstrun|0
+line:	con_allownotify "1"
+parseArg() con_allownotify|1
+line:	con_enable "1"
+parseArg() con_enable|1
+line:	crosshair "1"
+parseArg() crosshair|1
+line:	demo_index "0"
+parseArg() demo_index|0
+line:	demo_index_max_other "500"
+parseArg() demo_index_max_other|500
+line:	dsp_enhance_stereo "0"
+parseArg() dsp_enhance_stereo|0
+line:	engine_no_focus_sleep "50"
+parseArg() engine_no_focus_sleep|50
+line:	force_audio_english "0"
+parseArg() force_audio_english|0
+line:	func_break_max_pieces "15"
+parseArg() func_break_max_pieces|15
+line:	g15_update_msec "250"
+parseArg() g15_update_msec|250
+line:	gameinstructor_enable "0"
+parseArg() gameinstructor_enable|0
+line:	hud_scaling "0.850000"
+parseArg() hud_scaling|0.850000
+line:	hud_showtargetid "1"
+parseArg() hud_showtargetid|1
+line:	hud_takesshots "0"
+parseArg() hud_takesshots|0
+line:	joy_accelmax "1.0"
+parseArg() joy_accelmax|1.0
+line:	joy_accelscale "3.5"
+parseArg() joy_accelscale|3.5
+line:	joy_accelscalepoly "0.4"
+parseArg() joy_accelscalepoly|0.4
+line:	joy_advanced "0"
+parseArg() joy_advanced|0
+line:	joy_advaxisr "0"
+parseArg() joy_advaxisr|0
+line:	joy_advaxisu "0"
+parseArg() joy_advaxisu|0
+line:	joy_advaxisv "0"
+parseArg() joy_advaxisv|0
+line:	joy_advaxisx "0"
+parseArg() joy_advaxisx|0
+line:	joy_advaxisy "0"
+parseArg() joy_advaxisy|0
+line:	joy_advaxisz "0"
+parseArg() joy_advaxisz|0
+line:	joy_autoaimdampen "0"
+parseArg() joy_autoaimdampen|0
+line:	joy_autoAimDampenMethod "0"
+parseArg() joy_autoAimDampenMethod|0
+line:	joy_autoaimdampenrange "0"
+parseArg() joy_autoaimdampenrange|0
+line:	joy_axisbutton_threshold "0.3"
+parseArg() joy_axisbutton_threshold|0.3
+line:	joy_cfg_preset "1"
+parseArg() joy_cfg_preset|1
+line:	joy_circle_correct "1"
+parseArg() joy_circle_correct|1
+line:	joy_curvepoint_1 "0.001"
+parseArg() joy_curvepoint_1|0.001
+line:	joy_curvepoint_2 "0.4"
+parseArg() joy_curvepoint_2|0.4
+line:	joy_curvepoint_3 "0.75"
+parseArg() joy_curvepoint_3|0.75
+line:	joy_curvepoint_4 "1"
+parseArg() joy_curvepoint_4|1
+line:	joy_curvepoint_end "2"
+parseArg() joy_curvepoint_end|2
+line:	joy_diagonalpov "0"
+parseArg() joy_diagonalpov|0
+line:	joy_display_input "0"
+parseArg() joy_display_input|0
+line:	joy_forwardsensitivity "-1"
+parseArg() joy_forwardsensitivity|-1
+line:	joy_forwardthreshold "0.15"
+parseArg() joy_forwardthreshold|0.15
+line:	joy_gamma "0.2"
+parseArg() joy_gamma|0.2
+line:	joy_inverty "0"
+parseArg() joy_inverty|0
+line:	joy_lowend "1"
+parseArg() joy_lowend|1
+line:	joy_lowend_linear "0.55"
+parseArg() joy_lowend_linear|0.55
+line:	joy_lowmap "1"
+parseArg() joy_lowmap|1
+line:	joy_movement_stick "0"
+parseArg() joy_movement_stick|0
+line:	joy_name "joystick"
+parseArg() joy_name|joystick
+line:	joy_no_accel_jump "0"
+parseArg() joy_no_accel_jump|0
+line:	joy_pitchsensitivity "-1"
+parseArg() joy_pitchsensitivity|-1
+line:	joy_pitchthreshold "0.15"
+parseArg() joy_pitchthreshold|0.15
+line:	joy_response_look "0"
+parseArg() joy_response_look|0
+line:	joy_response_look_pitch "1"
+parseArg() joy_response_look_pitch|1
+line:	joy_response_move "1"
+parseArg() joy_response_move|1
+line:	joy_sensitive_step0 "0.1"
+parseArg() joy_sensitive_step0|0.1
+line:	joy_sensitive_step1 "0.4"
+parseArg() joy_sensitive_step1|0.4
+line:	joy_sensitive_step2 "0.90"
+parseArg() joy_sensitive_step2|0.90
+line:	joy_sidesensitivity "1"
+parseArg() joy_sidesensitivity|1
+line:	joy_sidethreshold "0.15"
+parseArg() joy_sidethreshold|0.15
+line:	joy_wingmanwarrior_centerhack "0"
+parseArg() joy_wingmanwarrior_centerhack|0
+line:	joy_wingmanwarrior_turnhack "0"
+parseArg() joy_wingmanwarrior_turnhack|0
+line:	joy_yawsensitivity "-1"
+parseArg() joy_yawsensitivity|-1
+line:	joy_yawthreshold "0.15"
+parseArg() joy_yawthreshold|0.15
+line:	joystick "1"
+parseArg() joystick|1
+line:	joystick_force_disabled "1"
+parseArg() joystick_force_disabled|1
+line:	joystick_force_disabled_set_from_options "1"
+parseArg() joystick_force_disabled_set_from_options|1
+line:	key_bind_version "5"
+parseArg() key_bind_version|5
+line:	lobby_default_privacy_bits2 "0"
+parseArg() lobby_default_privacy_bits2|0
+line:	lockMoveControllerRet "0"
+parseArg() lockMoveControllerRet|0
+line:	lookspring "0"
+parseArg() lookspring|0
+line:	lookstrafe "0"
+parseArg() lookstrafe|0
+line:	m_customaccel "0"
+parseArg() m_customaccel|0
+line:	m_customaccel_exponent "1.05"
+parseArg() m_customaccel_exponent|1.05
+line:	m_customaccel_max "0"
+parseArg() m_customaccel_max|0
+line:	m_customaccel_scale "0.04"
+parseArg() m_customaccel_scale|0.04
+line:	m_forward "1"
+parseArg() m_forward|1
+line:	m_mouseaccel1 "0"
+parseArg() m_mouseaccel1|0
+line:	m_mouseaccel2 "0"
+parseArg() m_mouseaccel2|0
+line:	m_mousespeed "1"
+parseArg() m_mousespeed|1
+line:	m_pitch "0.022"
+parseArg() m_pitch|0.022
+line:	m_rawinput "1"
+parseArg() m_rawinput|1
+line:	m_side "0.8"
+parseArg() m_side|0.8
+line:	m_yaw "0.022"
+parseArg() m_yaw|0.022
+line:	mapoverview_icon_scale "1.0"
+parseArg() mapoverview_icon_scale|1.0
+line:	mat_enable_uber_shaders "1"
+parseArg() mat_enable_uber_shaders|1
+line:	mat_monitorgamma "1.6"
+parseArg() mat_monitorgamma|1.6
+line:	mat_monitorgamma_tv_enabled "0"
+parseArg() mat_monitorgamma_tv_enabled|0
+line:	mat_powersavingsmode "0"
+parseArg() mat_powersavingsmode|0
+line:	mat_queue_report "0"
+parseArg() mat_queue_report|0
+line:	mat_spewalloc "0"
+parseArg() mat_spewalloc|0
+line:	mat_texture_list_content_path ""
+parseArg() mat_texture_list_content_path|
+line:	mc_accel_band_size "0.5"
+parseArg() mc_accel_band_size|0.5
+line:	mc_dead_zone_radius "0.06"
+parseArg() mc_dead_zone_radius|0.06
+line:	mc_max_pitchrate "100.0"
+parseArg() mc_max_pitchrate|100.0
+line:	mc_max_yawrate "230.0"
+parseArg() mc_max_yawrate|230.0
+line:	mm_csgo_community_search_players_min "3"
+parseArg() mm_csgo_community_search_players_min|3
+line:	mm_dedicated_search_maxping "150"
+parseArg() mm_dedicated_search_maxping|150
+line:	mm_server_search_lan_ports "27015,27016,27017,27018,27019,27020"
+parseArg() mm_server_search_lan_ports|27015,27016,27017,27018,27019,27020
+line:	move_stick_aggression_strength "60.0"
+parseArg() move_stick_aggression_strength|60.0
+line:	move_stick_aggressive "1"
+parseArg() move_stick_aggressive|1
+line:	move_stick_circular_deadzone_max "0.98"
+parseArg() move_stick_circular_deadzone_max|0.98
+line:	move_stick_circular_deadzone_min "0.17"
+parseArg() move_stick_circular_deadzone_min|0.17
+line:	move_stick_response_curve "2.0"
+parseArg() move_stick_response_curve|2.0
+line:	move_stick_square_deadzone_forward "0.0"
+parseArg() move_stick_square_deadzone_forward|0.0
+line:	move_stick_square_deadzone_strafe "0.0"
+parseArg() move_stick_square_deadzone_strafe|0.0
+line:	move_stick_walk_zone "0.65"
+parseArg() move_stick_walk_zone|0.65
+line:	move_touchpad_circular_deadzone_min "0.1"
+parseArg() move_touchpad_circular_deadzone_min|0.1
+line:	move_touchpad_sensitivity_forward "1.0"
+parseArg() move_touchpad_sensitivity_forward|1.0
+line:	move_touchpad_sensitivity_strafe "1.0"
+parseArg() move_touchpad_sensitivity_strafe|1.0
+line:	move_touchpad_square_deadzone_forward "0.2"
+parseArg() move_touchpad_square_deadzone_forward|0.2
+line:	move_touchpad_square_deadzone_strafe "0.2"
+parseArg() move_touchpad_square_deadzone_strafe|0.2
+line:	muzzleflash_light "1"
+parseArg() muzzleflash_light|1
+line:	name "Toxic Noob"
+parseArg() name|Toxic Noob
+line:	net_allow_multicast "1"
+parseArg() net_allow_multicast|1
+line:	net_graph "1"
+parseArg() net_graph|1
+line:	net_graphheight "64"
+parseArg() net_graphheight|64
+line:	net_graphholdsvframerate "0"
+parseArg() net_graphholdsvframerate|0
+line:	net_graphipc "0"
+parseArg() net_graphipc|0
+line:	net_graphmsecs "400"
+parseArg() net_graphmsecs|400
+line:	net_graphpos "1"
+parseArg() net_graphpos|1
+line:	net_graphproportionalfont "1"
+parseArg() net_graphproportionalfont|1
+line:	net_graphshowinterp "1"
+parseArg() net_graphshowinterp|1
+line:	net_graphshowlatency "1"
+parseArg() net_graphshowlatency|1
+line:	net_graphshowsvframerate "0"
+parseArg() net_graphshowsvframerate|0
+line:	net_graphsolid "1"
+parseArg() net_graphsolid|1
+line:	net_graphtext "1"
+parseArg() net_graphtext|1
+line:	net_maxroutable "1200"
+parseArg() net_maxroutable|1200
+line:	net_scale "5"
+parseArg() net_scale|5
+line:	net_steamcnx_allowrelay "1"
+parseArg() net_steamcnx_allowrelay|1
+line:	npc_height_adjust "1"
+parseArg() npc_height_adjust|1
+line:	option_duck_method "0"
+parseArg() option_duck_method|0
+line:	option_speed_method "0"
+parseArg() option_speed_method|0
+line:	password "6AB82D2B47EBE7E763DDA5F9D23AA0FBB4235E5AD7D5945E72E9BEBC142270D8"
+parseArg() password|6AB82D2B47EBE7E763DDA5F9D23AA0FBB4235E5AD7D5945E72E9BEBC142270D8
+line:	play_distance "1"
+parseArg() play_distance|1
+line:	player_botdifflast_s "5"
+parseArg() player_botdifflast_s|5
+line:	player_competitive_maplist_2v2_10_0_E8C782EC "mg_de_boyard,mg_de_chalice,mg_de_vertigo,mg_de_inferno,mg_de_overpass,mg_de_cbble,mg_de_train,mg_de_shortnuke,mg_de_shortdust,mg_de_lake"
+parseArg() player_competitive_maplist_2v2_10_0_E8C782EC|mg_de_boyard,mg_de_chalice,mg_de_vertigo,mg_de_inferno,mg_de_overpass,mg_de_cbble,mg_de_train,mg_de_shortnuke,mg_de_shortdust,mg_de_lake
+line:	player_competitive_maplist_8_10_0_C9C8D674 "mg_de_inferno,mg_de_mirage"
+parseArg() player_competitive_maplist_8_10_0_C9C8D674|mg_de_inferno,mg_de_mirage
+line:	player_nevershow_communityservermessage "0"
+parseArg() player_nevershow_communityservermessage|0
+line:	player_survival_list_10_0_303 "mg_dz_blacksite,mg_dz_sirocco,mg_dz_vineyard,mg_dz_ember"
+parseArg() player_survival_list_10_0_303|mg_dz_blacksite,mg_dz_sirocco,mg_dz_vineyard,mg_dz_ember
+line:	player_teamplayedlast "2"
+parseArg() player_teamplayedlast|2
+line:	player_wargames_list2_10_0_E04 "mg_skirmish_retakes"
+parseArg() player_wargames_list2_10_0_E04|mg_skirmish_retakes
+line:	r_drawmodelstatsoverlaymax "1.5"
+parseArg() r_drawmodelstatsoverlaymax|1.5
+line:	r_drawmodelstatsoverlaymin "0.1"
+parseArg() r_drawmodelstatsoverlaymin|0.1
+line:	r_drawtracers_firstperson "1"
+parseArg() r_drawtracers_firstperson|1
+line:	r_eyegloss "1"
+parseArg() r_eyegloss|1
+line:	r_eyemove "1"
+parseArg() r_eyemove|1
+line:	r_eyeshift_x "0"
+parseArg() r_eyeshift_x|0
+line:	r_eyeshift_y "0"
+parseArg() r_eyeshift_y|0
+line:	r_eyeshift_z "0"
+parseArg() r_eyeshift_z|0
+line:	r_eyesize "0"
+parseArg() r_eyesize|0
+line:	r_player_visibility_mode "0"
+parseArg() r_player_visibility_mode|0
+line:	rate "196608"
+parseArg() rate|196608
+line:	safezonex "1.000000"
+parseArg() safezonex|1.000000
+line:	safezoney "1.000000"
+parseArg() safezoney|1.000000
+line:	scene_showfaceto "0"
+parseArg() scene_showfaceto|0
+line:	scene_showlook "0"
+parseArg() scene_showlook|0
+line:	scene_showmoveto "0"
+parseArg() scene_showmoveto|0
+line:	scene_showunlock "0"
+parseArg() scene_showunlock|0
+line:	sensitivity "4.14"
+parseArg() sensitivity|4.14
+line:	sk_autoaim_mode "1"
+parseArg() sk_autoaim_mode|1
+line:	skill "1.000000"
+parseArg() skill|1.000000
+line:	snd_deathcamera_volume "0.3"
+parseArg() snd_deathcamera_volume|0.3
+line:	snd_duckerattacktime "0.5"
+parseArg() snd_duckerattacktime|0.5
+line:	snd_duckerreleasetime "2.5"
+parseArg() snd_duckerreleasetime|2.5
+line:	snd_duckerthreshold "0.15"
+parseArg() snd_duckerthreshold|0.15
+line:	snd_ducking_off "1"
+parseArg() snd_ducking_off|1
+line:	snd_ducktovolume "0.55"
+parseArg() snd_ducktovolume|0.55
+line:	snd_dzmusic_volume "0.2"
+parseArg() snd_dzmusic_volume|0.2
+line:	snd_hrtf_distance_behind "100"
+parseArg() snd_hrtf_distance_behind|100
+line:	snd_hrtf_voice_delay "0.1"
+parseArg() snd_hrtf_voice_delay|0.1
+line:	snd_hwcompat "0"
+parseArg() snd_hwcompat|0
+line:	snd_mapobjective_volume "0.106644"
+parseArg() snd_mapobjective_volume|0.106644
+line:	snd_menumusic_volume "0.117870"
+parseArg() snd_menumusic_volume|0.117870
+line:	snd_mix_async "1"
+parseArg() snd_mix_async|1
+line:	snd_mix_async_onetime_reset "1"
+parseArg() snd_mix_async_onetime_reset|1
+line:	snd_mixahead "0.025"
+parseArg() snd_mixahead|0.025
+line:	snd_music_selection "2"
+parseArg() snd_music_selection|2
+line:	snd_music_volume_onetime_reset_2 "1"
+parseArg() snd_music_volume_onetime_reset_2|1
+line:	snd_musicvolume_multiplier_inoverlay "0.1"
+parseArg() snd_musicvolume_multiplier_inoverlay|0.1
+line:	snd_mute_losefocus "1"
+parseArg() snd_mute_losefocus|1
+line:	snd_mute_mvp_music_live_players "0"
+parseArg() snd_mute_mvp_music_live_players|0
+line:	snd_mvp_volume "0.392900"
+parseArg() snd_mvp_volume|0.392900
+line:	snd_pitchquality "1"
+parseArg() snd_pitchquality|1
+line:	snd_roundend_volume "0.058935"
+parseArg() snd_roundend_volume|0.058935
+line:	snd_roundstart_volume "0.089806"
+parseArg() snd_roundstart_volume|0.089806
+line:	snd_surround_speakers "0"
+parseArg() snd_surround_speakers|0
+line:	snd_tensecondwarning_volume "0.122872"
+parseArg() snd_tensecondwarning_volume|0.122872
+line:	sound_device_override ""
+parseArg() sound_device_override|
+line:	spec_replay_autostart "0"
+parseArg() spec_replay_autostart|0
+line:	spec_show_xray "1"
+parseArg() spec_show_xray|1
+line:	spec_usenumberkeys_nobinds "1"
+parseArg() spec_usenumberkeys_nobinds|1
+line:	ss_splitmode "0"
+parseArg() ss_splitmode|0
+line:	steaminput_firsttimepopup "1"
+parseArg() steaminput_firsttimepopup|1
+line:	steaminput_glyph_display_mode "0"
+parseArg() steaminput_glyph_display_mode|0
+line:	steaminput_glyph_neutral "1"
+parseArg() steaminput_glyph_neutral|1
+line:	steaminput_glyph_solid "1"
+parseArg() steaminput_glyph_solid|1
+line:	steaminput_glyph_style "1"
+parseArg() steaminput_glyph_style|1
+line:	store_version "1"
+parseArg() store_version|1
+line:	suitvolume "0.25"
+parseArg() suitvolume|0.25
+line:	sv_forcepreload "0"
+parseArg() sv_forcepreload|0
+line:	sv_log_onefile "0"
+parseArg() sv_log_onefile|0
+line:	sv_logbans "0"
+parseArg() sv_logbans|0
+line:	sv_logecho "1"
+parseArg() sv_logecho|1
+line:	sv_logfile "1"
+parseArg() sv_logfile|1
+line:	sv_logflush "0"
+parseArg() sv_logflush|0
+line:	sv_logsdir "logs"
+parseArg() sv_logsdir|logs
+line:	sv_noclipaccelerate "5"
+parseArg() sv_noclipaccelerate|5
+line:	sv_noclipspeed "5"
+parseArg() sv_noclipspeed|5
+line:	sv_pvsskipanimation "1"
+parseArg() sv_pvsskipanimation|1
+line:	sv_skyname "nukeblank"
+parseArg() sv_skyname|nukeblank
+line:	sv_specaccelerate "5"
+parseArg() sv_specaccelerate|5
+line:	sv_specnoclip "1"
+parseArg() sv_specnoclip|1
+line:	sv_specspeed "3"
+parseArg() sv_specspeed|3
+line:	sv_unlockedchapters "1"
+parseArg() sv_unlockedchapters|1
+line:	sv_voiceenable "1"
+parseArg() sv_voiceenable|1
+line:	test_convar "0"
+parseArg() test_convar|0
+line:	texture_budget_background_alpha "128"
+parseArg() texture_budget_background_alpha|128
+line:	texture_budget_panel_bottom_of_history_fraction ".25"
+parseArg() texture_budget_panel_bottom_of_history_fraction|.25
+line:	texture_budget_panel_height "284"
+parseArg() texture_budget_panel_height|284
+line:	texture_budget_panel_width "512"
+parseArg() texture_budget_panel_width|512
+line:	texture_budget_panel_x "0"
+parseArg() texture_budget_panel_x|0
+line:	texture_budget_panel_y "450"
+parseArg() texture_budget_panel_y|450
+line:	tr_best_course_time "0"
+parseArg() tr_best_course_time|0
+line:	tr_completed_training "0"
+parseArg() tr_completed_training|0
+line:	triple_monitor_mode "0"
+parseArg() triple_monitor_mode|0
+line:	trusted_launch "1"
+parseArg() trusted_launch|1
+line:	trusted_launch_once "0"
+parseArg() trusted_launch_once|0
+line:	tv_nochat "0"
+parseArg() tv_nochat|0
+line:	ui_deepstats_radio_heat_figurine "0"
+parseArg() ui_deepstats_radio_heat_figurine|0
+line:	ui_deepstats_radio_heat_tab "0"
+parseArg() ui_deepstats_radio_heat_tab|0
+line:	ui_deepstats_radio_heat_team "0"
+parseArg() ui_deepstats_radio_heat_team|0
+line:	ui_deepstats_toplevel_mode "0"
+parseArg() ui_deepstats_toplevel_mode|0
+line:	ui_inventorysettings_recently_acknowledged ""
+parseArg() ui_inventorysettings_recently_acknowledged|
+line:	ui_mainmenu_bkgnd_movie_CC4ECB9 "random"
+parseArg() ui_mainmenu_bkgnd_movie_CC4ECB9|random
+line:	ui_nearbylobbies_filter3 "competitive"
+parseArg() ui_nearbylobbies_filter3|competitive
+line:	ui_news_last_read_link "https://www.counter-strike.net/newsentry/3702568031467132888"
+parseArg() ui_news_last_read_link|https://www.counter-strike.net/newsentry/3702568031467132888
+line:	ui_playsettings_custom_preset ""
+parseArg() ui_playsettings_custom_preset|
+line:	ui_playsettings_directchallengekey "APKY4-6QYJ-SD55T-WHPE"
+parseArg() ui_playsettings_directchallengekey|APKY4-6QYJ-SD55T-WHPE
+line:	ui_playsettings_flags_listen_casual "0"
+parseArg() ui_playsettings_flags_listen_casual|0
+line:	ui_playsettings_flags_listen_competitive "16"
+parseArg() ui_playsettings_flags_listen_competitive|16
+line:	ui_playsettings_flags_listen_cooperative "0"
+parseArg() ui_playsettings_flags_listen_cooperative|0
+line:	ui_playsettings_flags_listen_deathmatch "16"
+parseArg() ui_playsettings_flags_listen_deathmatch|16
+line:	ui_playsettings_flags_listen_scrimcomp2v2 "0"
+parseArg() ui_playsettings_flags_listen_scrimcomp2v2|0
+line:	ui_playsettings_flags_listen_skirmish "0"
+parseArg() ui_playsettings_flags_listen_skirmish|0
+line:	ui_playsettings_flags_listen_survival "0"
+parseArg() ui_playsettings_flags_listen_survival|0
+line:	ui_playsettings_flags_official_casual "0"
+parseArg() ui_playsettings_flags_official_casual|0
+line:	ui_playsettings_flags_official_competitive "32"
+parseArg() ui_playsettings_flags_official_competitive|32
+line:	ui_playsettings_flags_official_cooperative "0"
+parseArg() ui_playsettings_flags_official_cooperative|0
+line:	ui_playsettings_flags_official_deathmatch "4"
+parseArg() ui_playsettings_flags_official_deathmatch|4
+line:	ui_playsettings_flags_official_scrimcomp2v2 "0"
+parseArg() ui_playsettings_flags_official_scrimcomp2v2|0
+line:	ui_playsettings_flags_official_skirmish "0"
+parseArg() ui_playsettings_flags_official_skirmish|0
+line:	ui_playsettings_flags_official_survival "0"
+parseArg() ui_playsettings_flags_official_survival|0
+line:	ui_playsettings_maps_listen_casual "mg_de_inferno"
+parseArg() ui_playsettings_maps_listen_casual|mg_de_inferno
+line:	ui_playsettings_maps_listen_competitive "mg_de_inferno"
+parseArg() ui_playsettings_maps_listen_competitive|mg_de_inferno
+line:	ui_playsettings_maps_listen_deathmatch "random_classic"
+parseArg() ui_playsettings_maps_listen_deathmatch|random_classic
+line:	ui_playsettings_maps_listen_scrimcomp2v2 "mg_de_shortdust"
+parseArg() ui_playsettings_maps_listen_scrimcomp2v2|mg_de_shortdust
+line:	ui_playsettings_maps_listen_skirmish "mg_skirmish_retakes"
+parseArg() ui_playsettings_maps_listen_skirmish|mg_skirmish_retakes
+line:	ui_playsettings_maps_official_casual "mg_casualdelta"
+parseArg() ui_playsettings_maps_official_casual|mg_casualdelta
+line:	ui_playsettings_maps_official_deathmatch "mg_casualdelta"
+parseArg() ui_playsettings_maps_official_deathmatch|mg_casualdelta
+line:	ui_playsettings_maps_workshop "@workshop/243702660/aim_botz"
+parseArg() ui_playsettings_maps_workshop|@workshop/243702660/aim_botz
+line:	ui_playsettings_mode_listen "competitive"
+parseArg() ui_playsettings_mode_listen|competitive
+line:	ui_playsettings_mode_official_v20 "casual"
+parseArg() ui_playsettings_mode_official_v20|casual
+line:	ui_playsettings_prime "0"
+parseArg() ui_playsettings_prime|0
+line:	ui_playsettings_survival_solo "1"
+parseArg() ui_playsettings_survival_solo|1
+line:	ui_playsettings_warmup_map_name "de_mirage"
+parseArg() ui_playsettings_warmup_map_name|de_mirage
+line:	ui_popup_weaponupdate_version "2109"
+parseArg() ui_popup_weaponupdate_version|2109
+line:	ui_setting_advertiseforhire_auto "1"
+parseArg() ui_setting_advertiseforhire_auto|1
+line:	ui_setting_advertiseforhire_auto_last "/competitive"
+parseArg() ui_setting_advertiseforhire_auto_last|/competitive
+line:	ui_show_subscription_alert "1"
+parseArg() ui_show_subscription_alert|1
+line:	ui_show_unlock_competitive_alert ""
+parseArg() ui_show_unlock_competitive_alert|
+line:	ui_steam_overlay_notification_position "topright"
+parseArg() ui_steam_overlay_notification_position|topright
+line:	ui_vanitysetting_loadoutslot_ct "melee"
+parseArg() ui_vanitysetting_loadoutslot_ct|melee
+line:	ui_vanitysetting_loadoutslot_t "melee"
+parseArg() ui_vanitysetting_loadoutslot_t|melee
+line:	ui_vanitysetting_team "ct"
+parseArg() ui_vanitysetting_team|ct
+line:	vgui_message_dialog_modal "1"
+parseArg() vgui_message_dialog_modal|1
+line:	viewmodel_fov "60"
+parseArg() viewmodel_fov|60
+line:	viewmodel_offset_x "1"
+parseArg() viewmodel_offset_x|1
+line:	viewmodel_offset_y "1"
+parseArg() viewmodel_offset_y|1
+line:	viewmodel_offset_z "-1"
+parseArg() viewmodel_offset_z|-1
+line:	viewmodel_presetpos "1"
+parseArg() viewmodel_presetpos|1
+line:	viewmodel_recoil "0"
+parseArg() viewmodel_recoil|0
+line:	voice_caster_enable "0"
+parseArg() voice_caster_enable|0
+line:	voice_caster_scale "0.304030"
+parseArg() voice_caster_scale|0.304030
+line:	voice_enable "1"
+parseArg() voice_enable|1
+line:	voice_forcemicrecord "1"
+parseArg() voice_forcemicrecord|1
+line:	voice_mixer_boost "0"
+parseArg() voice_mixer_boost|0
+line:	voice_mixer_mute "0"
+parseArg() voice_mixer_mute|0
+line:	voice_mixer_volume "1.0"
+parseArg() voice_mixer_volume|1.0
+line:	voice_modenable "1"
+parseArg() voice_modenable|1
+line:	voice_positional "0"
+parseArg() voice_positional|0
+line:	voice_scale "1.0"
+parseArg() voice_scale|1.0
+line:	voice_system_enable "1"
+parseArg() voice_system_enable|1
+line:	voice_threshold "4000"
+parseArg() voice_threshold|4000
+line:	volume "0.500479"
+parseArg() volume|0.500479
+line:	vprof_graphheight "256"
+parseArg() vprof_graphheight|256
+line:	vprof_graphwidth "512"
+parseArg() vprof_graphwidth|512
+line:	vprof_unaccounted_limit "0.3"
+parseArg() vprof_unaccounted_limit|0.3
+line:	vprof_verbose "1"
+parseArg() vprof_verbose|1
+line:	vprof_warningmsec "10"
+parseArg() vprof_warningmsec|10
+line:	weapon_accuracy_logging "0"
+parseArg() weapon_accuracy_logging|0
+line:	xbox_autothrottle "1"
+parseArg() xbox_autothrottle|1
+line:	xbox_throttlebias "100"
+parseArg() xbox_throttlebias|100
+line:	xbox_throttlespoof "200"
+parseArg() xbox_throttlespoof|200
+line:	zoom_sensitivity_ratio_joystick "1.0"
+parseArg() zoom_sensitivity_ratio_joystick|1.0
+line:	zoom_sensitivity_ratio_mouse "1.50"
+parseArg() zoom_sensitivity_ratio_mouse|1.50
+line:	
+breakpoint 001
+auto 001
+auto 002
+autobind 001
+autobind 002 slot1
+autobind 003
+autobind 002 slot2
+autobind 003
+autobind 002 slot3
+autobind 003
+autobind 002 slot4
+autobind 003
+autobind 002 slot5
+autobind 003
+autobind 002 slot12
+autobind 003
+autobind 002 use weapon_flashbang
+autobind 002 use weapon_smokegrenade
+autobind 002 use weapon_molotov
+autobind 002 use weapon_incgrenade
+autobind 004 0
+autobind 005
+autobind 006
+auto 003
+auto 004
+breakpoint 002
+if exist "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo" (echo 1) else (echo 0)
+1
+
+if exist "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-backups\csgo" (echo 1) else (echo 0)
+1
+
+cd "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-backups\csgo" & dir /b/o:d
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+
+24
+if exist "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-backups\csgo\25" (echo 1) else (echo 0)
+0
+
+xcopy /e/h/i/y "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo" "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-backups\csgo\25"
+steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\user\commands.cfg
+182 File(s) copied
+ffensive\csgo\cfg\wumiancfg-csgo\hack\no-radar.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\hack\norecoil.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\hack\radar.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\hack\xray.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\training\clutch.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\training\hell.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\training\projectile.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\user\args.cfg
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\wumiancfg-csgo\user\binds.cfg
+C:\Program Files (x86)\Steam\
+line:	alias +pwajump "+jump; +duck"
+line:	alias -pwajump "-jump; -duck"
+line:	alias +pwaswitchknife slot3
+line:	alias -pwaswitchknife lastinv
+line:	
+line:	exec wumiancfg-csgo/default
+line:	
+log outside 001
+log 001
+log 002
+log 003 Config version v1.6
+log 004 
+log 003 First time false (with 1 backup generated)
+log 004 
+log 003 Game config C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg
+log 004 
+log 003 Release version v1.0
+log 004 
+log 003 Steam C:\Program Files (x86)\Steam
+log 004 
+log 003 User [1207716949] Toxic Noob
+log 004 
+log 005
+log outside 002
